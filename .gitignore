@@ -1,0 +1,4 @@
+# Python bytecode (generated when skill scripts run, e.g. ui-ux-pro-max search)
+__pycache__/
+*.py[cod]
+.coverage
