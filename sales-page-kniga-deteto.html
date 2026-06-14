@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Това, което детето ти не може да каже — книга за майки</title>
+<meta name="description" content="Разбери защо тревожността, агресията и затварянето при децата често са симптом на семейната система — и какво можеш да промениш още днес." />
+<style>
+  /* ===== RESET / BASE ===== */
+  *, *::before, *::after { box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
+
+  :root {
+    --ink: #1f2a2e;
+    --teal: #1d6c63;
+    --teal-dark: #134a44;
+    --cream: #fbf6ee;
+    --cream-2: #f3ead9;
+    --coral: #e0664a;
+    --coral-dark: #c64f35;
+    --gold: #d9a441;
+    --muted: #5d6a6c;
+    --line: #e6ddcd;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: var(--cream) !important;
+    color: var(--ink) !important;
+    font-family: "Georgia", "Times New Roman", serif !important;
+    font-size: 18px !important;
+    line-height: 1.65 !important;
+    -webkit-font-smoothing: antialiased !important;
+    overflow-x: hidden !important;
+  }
+
+  h1, h2, h3, .sans, .btn, .badge, .nav, .pill, .price-tag, .faq-q {
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+  }
+
+  img { max-width: 100% !important; display: block !important; }
+  a { color: inherit !important; }
+
+  .wrap { max-width: 1040px !important; margin: 0 auto !important; padding: 0 22px !important; }
+  .narrow { max-width: 760px !important; margin: 0 auto !important; }
+
+  h1 { font-size: 2.55rem !important; line-height: 1.12 !important; font-weight: 800 !important; letter-spacing: -0.5px !important; }
+  h2 { font-size: 1.9rem !important; line-height: 1.2 !important; font-weight: 800 !important; letter-spacing: -0.3px !important; }
+  h3 { font-size: 1.2rem !important; font-weight: 700 !important; }
+  p  { margin-bottom: 1rem !important; }
+
+  .eyebrow {
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    color: var(--coral) !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* ===== BUTTONS ===== */
+  .btn {
+    display: inline-block !important;
+    background: var(--coral) !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: 800 !important;
+    font-size: 1.18rem !important;
+    padding: 20px 40px !important;
+    border-radius: 60px !important;
+    border: none !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    letter-spacing: 0.3px !important;
+    box-shadow: 0 12px 28px rgba(224,102,74,0.35) !important;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease !important;
+    line-height: 1.25 !important;
+  }
+  .btn:hover { background: var(--coral-dark) !important; transform: translateY(-2px) !important; box-shadow: 0 16px 34px rgba(224,102,74,0.45) !important; }
+  .btn-sub { display: block !important; font-size: 0.82rem !important; font-weight: 600 !important; letter-spacing: 1px !important; color: var(--muted) !important; margin-top: 12px !important; text-align: center !important; font-family: "Helvetica Neue", Arial, sans-serif !important; }
+
+  /* ===== URGENCY BAR ===== */
+  .topbar {
+    background: var(--teal-dark) !important;
+    color: #fff !important;
+    text-align: center !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 0.92rem !important;
+    font-weight: 600 !important;
+    padding: 11px 16px !important;
+    letter-spacing: 0.3px !important;
+  }
+  .topbar b { color: var(--gold) !important; }
+
+  /* ===== HERO ===== */
+  .hero { background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%) !important; padding: 56px 0 64px !important; }
+  .hero-grid { display: flex !important; gap: 48px !important; align-items: center !important; flex-wrap: wrap !important; }
+  .hero-col { flex: 1 1 360px !important; }
+  .hero h1 { margin-bottom: 18px !important; }
+  .hero-lead { font-size: 1.22rem !important; color: var(--muted) !important; margin-bottom: 26px !important; }
+  .hero .btn { width: auto !important; }
+
+  .stars { color: var(--gold) !important; font-size: 1.1rem !important; letter-spacing: 2px !important; }
+  .rating-line { font-family: "Helvetica Neue", Arial, sans-serif !important; font-size: 0.92rem !important; color: var(--muted) !important; margin-bottom: 20px !important; }
+
+  /* ===== IMAGE PLACEHOLDERS ===== */
+  .book-shot {
+    background: linear-gradient(135deg, #2a7c72 0%, #134a44 100%) !important;
+    border-radius: 18px !important;
+    aspect-ratio: 4 / 5 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: rgba(255,255,255,0.85) !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 0.85rem !important;
+    text-align: center !important;
+    padding: 20px !important;
+    box-shadow: 0 26px 50px rgba(19,74,68,0.32) !important;
+    overflow: hidden !important;
+  }
+  .book-shot img { width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 18px !important; }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 64px 0 !important; }
+  .sec-cream2 { background: var(--cream-2) !important; }
+  .sec-teal { background: var(--teal) !important; color: #fff !important; }
+  .sec-teal .eyebrow { color: var(--gold) !important; }
+  .sec-teal h2, .sec-teal p { color: #fff !important; }
+  .center { text-align: center !important; }
+
+  /* Problem list */
+  .pain-list { list-style: none !important; margin-top: 22px !important; }
+  .pain-list li {
+    background: #fff !important;
+    border: 1px solid var(--line) !important;
+    border-left: 5px solid var(--coral) !important;
+    border-radius: 10px !important;
+    padding: 16px 20px !important;
+    margin-bottom: 14px !important;
+    font-size: 1.02rem !important;
+  }
+
+  .lead-after { font-size: 1.12rem !important; margin-top: 26px !important; font-style: italic !important; color: var(--teal-dark) !important; }
+
+  /* Benefits */
+  .benefits { display: flex !important; gap: 24px !important; flex-wrap: wrap !important; margin-top: 36px !important; }
+  .benefit {
+    flex: 1 1 280px !important;
+    background: #fff !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 16px !important;
+    padding: 30px 26px !important;
+    box-shadow: 0 8px 20px rgba(31,42,46,0.05) !important;
+  }
+  .benefit .num {
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 1.05rem !important;
+    color: #fff !important;
+    background: var(--teal) !important;
+    width: 44px !important; height: 44px !important;
+    border-radius: 50% !important;
+    display: flex !important; align-items: center !important; justify-content: center !important;
+    margin-bottom: 18px !important;
+  }
+  .benefit h3 { margin-bottom: 10px !important; color: var(--teal-dark) !important; }
+  .benefit p { color: var(--muted) !important; margin-bottom: 0 !important; font-size: 1rem !important; }
+
+  /* Testimonials */
+  .reviews { display: flex !important; gap: 24px !important; flex-wrap: wrap !important; margin-top: 36px !important; }
+  .review {
+    flex: 1 1 300px !important;
+    background: #fff !important;
+    border-radius: 16px !important;
+    padding: 26px !important;
+    border: 1px solid var(--line) !important;
+    box-shadow: 0 8px 20px rgba(31,42,46,0.05) !important;
+  }
+  .review .stars { font-size: 0.98rem !important; margin-bottom: 12px !important; display: block !important; }
+  .review p { font-size: 1.02rem !important; font-style: italic !important; margin-bottom: 16px !important; }
+  .review .who { font-family: "Helvetica Neue", Arial, sans-serif !important; font-weight: 700 !important; font-size: 0.92rem !important; color: var(--teal-dark) !important; font-style: normal !important; }
+  .review .who span { display: block !important; font-weight: 500 !important; color: var(--muted) !important; font-size: 0.82rem !important; }
+
+  /* Guarantee */
+  .guarantee-box {
+    background: #fff !important;
+    border: 2px dashed var(--teal) !important;
+    border-radius: 18px !important;
+    padding: 38px 30px !important;
+    text-align: center !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+  }
+  .guarantee-box .seal {
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 800 !important;
+    color: #fff !important;
+    background: var(--teal) !important;
+    display: inline-block !important;
+    padding: 10px 22px !important;
+    border-radius: 50px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 18px !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* ===== OFFER / PRICE ===== */
+  .offer-card {
+    background: #fff !important;
+    border-radius: 20px !important;
+    border: 1px solid var(--line) !important;
+    box-shadow: 0 24px 50px rgba(31,42,46,0.12) !important;
+    padding: 40px 34px !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  .price-old { font-family: "Helvetica Neue", Arial, sans-serif !important; color: var(--muted) !important; text-decoration: line-through !important; font-size: 1.3rem !important; }
+  .price-now { font-family: "Helvetica Neue", Arial, sans-serif !important; font-weight: 800 !important; font-size: 3.2rem !important; color: var(--coral) !important; line-height: 1 !important; margin: 4px 0 6px !important; }
+  .price-cur { font-size: 1.4rem !important; }
+  .save-pill {
+    display: inline-block !important;
+    background: var(--gold) !important;
+    color: #4a3300 !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.5px !important;
+    padding: 6px 14px !important;
+    border-radius: 50px !important;
+    margin-bottom: 16px !important;
+  }
+  .offer-card .btn { width: 100% !important; margin-top: 18px !important; }
+  .incl { list-style: none !important; text-align: left !important; max-width: 360px !important; margin: 22px auto 0 !important; }
+  .incl li { padding: 8px 0 8px 30px !important; position: relative !important; font-size: 1rem !important; }
+  .incl li::before { content: "✓" !important; position: absolute !important; left: 0 !important; color: var(--teal) !important; font-weight: 800 !important; }
+
+  /* Friend bundle */
+  .bundle {
+    background: linear-gradient(135deg, #fff 0%, var(--cream) 100%) !important;
+    border: 2px solid var(--gold) !important;
+    border-radius: 20px !important;
+    max-width: 720px !important;
+    margin: 36px auto 0 !important;
+    padding: 34px 30px !important;
+    text-align: center !important;
+    position: relative !important;
+  }
+  .bundle .tag {
+    position: absolute !important;
+    top: -16px !important; left: 50% !important; transform: translateX(-50%) !important;
+    background: var(--coral) !important; color: #fff !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 800 !important; font-size: 0.8rem !important;
+    padding: 8px 18px !important; border-radius: 50px !important;
+    letter-spacing: 0.5px !important; white-space: nowrap !important;
+  }
+  .bundle-price { font-family: "Helvetica Neue", Arial, sans-serif !important; margin: 14px 0 !important; }
+  .bundle-price .b-old { color: var(--muted) !important; text-decoration: line-through !important; font-size: 1.1rem !important; }
+  .bundle-price .b-now { font-weight: 800 !important; font-size: 2.2rem !important; color: var(--teal-dark) !important; }
+
+  /* FAQ */
+  details {
+    background: #fff !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 12px !important;
+    margin-bottom: 14px !important;
+    overflow: hidden !important;
+  }
+  summary {
+    cursor: pointer !important;
+    padding: 18px 22px !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    color: var(--teal-dark) !important;
+    list-style: none !important;
+    position: relative !important;
+    padding-right: 48px !important;
+  }
+  summary::-webkit-details-marker { display: none !important; }
+  summary::after { content: "+" !important; position: absolute !important; right: 22px !important; top: 50% !important; transform: translateY(-50%) !important; font-size: 1.5rem !important; color: var(--coral) !important; }
+  details[open] summary::after { content: "–" !important; }
+  details .faq-body { padding: 0 22px 20px !important; color: var(--muted) !important; }
+
+  /* Delivery */
+  .delivery-grid { display: flex !important; gap: 20px !important; flex-wrap: wrap !important; margin-top: 26px !important; }
+  .delivery-card { flex: 1 1 240px !important; background: #fff !important; border: 1px solid var(--line) !important; border-radius: 14px !important; padding: 24px !important; }
+  .delivery-card h3 { color: var(--teal-dark) !important; margin-bottom: 8px !important; }
+  .delivery-card .price-tag { font-family: "Helvetica Neue", Arial, sans-serif !important; font-weight: 800 !important; color: var(--coral) !important; font-size: 1.25rem !important; }
+  .delivery-note { font-size: 0.9rem !important; color: var(--muted) !important; margin-top: 18px !important; }
+
+  /* Final CTA */
+  .final { background: var(--teal-dark) !important; color: #fff !important; text-align: center !important; }
+  .final h2, .final p { color: #fff !important; }
+  .final .btn { margin-top: 24px !important; }
+
+  /* Footer */
+  footer { background: var(--ink) !important; color: #cfd6d6 !important; padding: 40px 0 !important; font-family: "Helvetica Neue", Arial, sans-serif !important; font-size: 0.9rem !important; text-align: center !important; }
+  footer a { color: #fff !important; text-decoration: underline !important; margin: 0 10px !important; display: inline-block !important; }
+  .foot-links { margin-bottom: 16px !important; }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 760px) {
+    html, body { font-size: 17px !important; }
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.55rem !important; }
+    section { padding: 44px 0 !important; }
+    .hero { padding: 36px 0 44px !important; }
+    .hero-grid { gap: 30px !important; }
+    .hero-col-img { order: -1 !important; }
+    .book-shot { max-width: 320px !important; margin: 0 auto !important; }
+    .btn { width: 100% !important; padding: 18px 24px !important; font-size: 1.08rem !important; }
+    .price-now { font-size: 2.6rem !important; }
+    .offer-card, .bundle, .guarantee-box { padding: 28px 20px !important; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== URGENCY BAR ===== -->
+  <div class="topbar">
+    🔥 Промоционално издание — остават само <b>67 броя</b> на намалена цена. Безплатна замяна 60 дни.
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-col">
+        <div class="eyebrow">Книга за майки на деца от 3 до 18 г.</div>
+        <h1>Това, което детето&nbsp;ти не може да каже</h1>
+        <p class="hero-lead">
+          Тревожността, агресията и затварянето при децата рядко са „просто характер“.
+          Най-често те са послание от цялата семейна система. Тази книга ти помага да
+          разчетеш посланието — и да върнеш спокойствието вкъщи.
+        </p>
+        <div class="rating-line">
+          <span class="stars">★★★★★</span> &nbsp;4.9/5 от над 1 200 майки
+        </div>
+        <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
+          Искам книгата сега →
+        </a>
+        <span class="btn-sub">🔒 Наложен платеж · Гаранция 60 дни · Доставка със Спиди</span>
+      </div>
+
+      <div class="hero-col hero-col-img">
+        <!-- ============================================================= -->
+        <!--  ПРОДУКТОВА СНИМКА 1 — корица на книгата.                      -->
+        <!--  Замени блока по-долу с: <img src="ТВОЯТА-СНИМКА.jpg"          -->
+        <!--  alt="Книга Това, което детето ти не може да каже" />         -->
+        <!--  (ChatGPT линковете не са реални изображения и няма да се      -->
+        <!--   заредят — качи файла в платформата и сложи неговия URL.)     -->
+        <!-- ============================================================= -->
+        <div class="book-shot">
+          [ Тук качи СНИМКА 1 — корицата на книгата ]
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PROBLEM ===== -->
+  <section>
+    <div class="wrap narrow">
+      <div class="eyebrow">Познато ли ти е?</div>
+      <h2>Опитваш всичко, а нищо не работи задълго</h2>
+      <p style="color:var(--muted) !important;">
+        Говориш спокойно, после повишаваш тон. Награждаваш, наказваш, преговаряш.
+        За кратко става по-добре — после всичко се връща. И тихо се питаш дали грешката е в теб.
+      </p>
+      <ul class="pain-list">
+        <li>Детето избухва за дребни неща, а ти вече не знаеш кога ще е следващият път.</li>
+        <li>Затваря се в стаята и в себе си — а на въпроса „какво има?“ отговаря с „нищо“.</li>
+        <li>Вкъщи има постоянно напрежение и конфликти, които изтощават цялото семейство.</li>
+        <li>Чувстваш, че не се разбирате, и че между вас расте невидима стена.</li>
+        <li>Прочела си статии и съвети, но те не обясняват <em>защо</em> се случва точно при вас.</li>
+      </ul>
+      <p class="lead-after">
+        Истината, която малко хора казват: поведението на детето често не е проблемът — то е симптом.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTION ===== -->
+  <section class="sec-teal">
+    <div class="wrap hero-grid">
+      <div class="hero-col">
+        <!-- ============================================================= -->
+        <!--  ПРОДУКТОВА СНИМКА 2 — книгата отворена / в ръка / mockup.     -->
+        <!--  Замени с: <img src="ТВОЯТА-СНИМКА.jpg" alt="..."/>           -->
+        <!-- ============================================================= -->
+        <div class="book-shot" style="background:linear-gradient(135deg,#e0664a 0%,#c64f35 100%) !important;">
+          [ Тук качи СНИМКА 2 — книгата отворена / mockup ]
+        </div>
+      </div>
+      <div class="hero-col">
+        <div class="eyebrow">Решението</div>
+        <h2>Виж детето през семейната система</h2>
+        <p>
+          „Това, което детето ти не може да каже“ те води стъпка по стъпка през идеята,
+          че детето е огледало на семейството. Когато се промени системата — се променя и детето.
+        </p>
+        <p>
+          Без сложни термини и без обвинения. С ясни обяснения, реални примери и упражнения,
+          които можеш да приложиш още същата вечер — за да разбираш по-добре детето си,
+          себе си и динамиките вкъщи.
+        </p>
+        <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
+          Започни промяната днес →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3 BENEFITS ===== -->
+  <section>
+    <div class="wrap center">
+      <div class="eyebrow">Защо точно тази книга</div>
+      <h2>Три неща, които ще се променят за теб</h2>
+    </div>
+    <div class="wrap benefits">
+      <div class="benefit">
+        <div class="num">1</div>
+        <h3>Разчиташ истинското послание</h3>
+        <p>
+          Спираш да гасиш пожари и започваш да разбираш какво всъщност казва поведението
+          на детето ти. Виждаш причината, не само симптома — и реагираш спокойно, а не на сляпо.
+        </p>
+      </div>
+      <div class="benefit">
+        <div class="num">2</div>
+        <h3>По-малко конфликти, повече близост</h3>
+        <p>
+          С конкретни стъпки сваляш напрежението вкъщи. Разговорите спират да са битка,
+          а детето отново започва да се отваря към теб.
+        </p>
+      </div>
+      <div class="benefit">
+        <div class="num">3</div>
+        <h3>Връщаш си увереността като майка</h3>
+        <p>
+          Спираш да се чувстваш виновна и безпомощна. Знаеш защо се случва и какво да направиш —
+          и водиш семейството си от позиция на спокойствие, а не на страх.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL PROOF ===== -->
+  <section class="sec-cream2">
+    <div class="wrap center">
+      <div class="eyebrow">Какво казват майките</div>
+      <h2>Над 1 200 семейства вече дишат по-леко</h2>
+    </div>
+    <div class="wrap reviews">
+      <div class="review">
+        <span class="stars">★★★★★</span>
+        <p>„Четях с буца в гърлото — сякаш някой най-после описа моя дом. За две седмици разговорите със сина ми се промениха коренно.“</p>
+        <div class="who">Десислава, 41 г.<span>майка на момче, 14 г.</span></div>
+      </div>
+      <div class="review">
+        <span class="stars">★★★★★</span>
+        <p>„Мислех, че дъщеря ми е просто „трудно дете“. Книгата ми показа колко много от напрежението идва от нас, родителите. Облекчение е.“</p>
+        <div class="who">Мария, 37 г.<span>майка на момиче, 9 г.</span></div>
+      </div>
+      <div class="review">
+        <span class="stars">★★★★★</span>
+        <p>„Агресията на сина ми ме плашеше. Тук намерих не критика, а разбиране и ясни стъпки. Вкъщи вече е по-спокойно.“</p>
+        <div class="who">Радостина, 44 г.<span>майка на момче, 7 г.</span></div>
+      </div>
+      <div class="review">
+        <span class="stars">★★★★★</span>
+        <p>„Написана е човешки, без сложни думи. Прочетох я за два дни и подчертах половината. Препоръчах я на сестра ми веднага.“</p>
+        <div class="who">Ивелина, 39 г.<span>майка на две деца</span></div>
+      </div>
+      <div class="review">
+        <span class="stars">★★★★★</span>
+        <p>„Тийнейджърката ми се беше затворила напълно. Не очаквах книга да помогне, но упражненията наистина отвориха разговор между нас.“</p>
+        <div class="who">Галя, 46 г.<span>майка на момиче, 16 г.</span></div>
+      </div>
+      <div class="review">
+        <span class="stars">★★★★★</span>
+        <p>„Най-полезната книга за родители, която съм чела. Не дава вина, а посока. Усещам, че най-после разбирам детето си.“</p>
+        <div class="who">Николета, 35 г.<span>майка на момче, 5 г.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OFFER / PRICE + CTA ===== -->
+  <section id="offer">
+    <div class="wrap center">
+      <div class="eyebrow">Поръчай днес</div>
+      <h2>Вземи книгата на промоционална цена</h2>
+    </div>
+    <div class="wrap">
+      <div class="offer-card">
+        <span class="save-pill">ПЕСТИШ 9,00 € · ОТСТЪПКА 36%</span>
+        <div class="price-old">24,90 €</div>
+        <div class="price-now">15,90&nbsp;<span class="price-cur">€</span></div>
+        <ul class="incl">
+          <li>Печатно издание „Това, което детето ти не може да каже“</li>
+          <li>Практически упражнения за прилагане още същия ден</li>
+          <li>Гаранция за връщане на парите — 60 дни</li>
+          <li>Плащане с наложен платеж — плащаш при доставка</li>
+        </ul>
+        <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
+          Поръчай за 15,90 € →
+        </a>
+        <span class="btn-sub">🔒 Без риск · Доставка със Спиди до офис или адрес</span>
+      </div>
+
+      <!-- ===== FRIEND BUNDLE ===== -->
+      <div class="bundle">
+        <span class="tag">⭐ НАЙ-ИЗГОДНО · ПОДАРИ НА ПРИЯТЕЛКА</span>
+        <h3 style="color:var(--teal-dark) !important; margin-top:8px !important;">Вземи 2 книги — втората с 50% отстъпка</h3>
+        <p style="color:var(--muted) !important;">
+          Познаваш майка, на която ѝ е тежко точно сега? Поръчай две книги в една пратка
+          и втората е на половин цена. Една за теб, една за приятелка.
+        </p>
+        <div class="bundle-price">
+          <span class="b-old">32,80 €</span> &nbsp;
+          <span class="b-now">23,85 €</span>
+        </div>
+        <p style="font-size:0.92rem !important; color:var(--muted) !important;">
+          Първа книга 15,90 € + втора книга само 7,95 € (–50%). Спестяваш още 8,95 €.
+        </p>
+        <a class="btn" style="background:var(--teal) !important; box-shadow:0 12px 28px rgba(29,108,99,0.35) !important;" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
+          Искам 2 книги за 23,85 € →
+        </a>
+        <span class="btn-sub">Идеален подарък — с грижа към приятелка</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GUARANTEE ===== -->
+  <section class="sec-cream2">
+    <div class="wrap">
+      <div class="guarantee-box">
+        <div class="seal">🛡️ ГАРАНЦИЯ 60 ДНИ</div>
+        <h2 style="margin-bottom:14px !important;">Без риск за теб</h2>
+        <p style="color:var(--muted) !important; margin-bottom:0 !important;">
+          Прочети книгата спокойно. Ако в рамките на 60 дни прецениш, че не е за теб,
+          пиши ни и ти връщаме парите — без въпроси и без неудобство.
+          Целият риск е на наша страна, защото вярваме в това, което сме създали.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section>
+    <div class="wrap narrow">
+      <div class="eyebrow center">Често задавани въпроси</div>
+      <h2 class="center" style="margin-bottom:32px !important;">Отговори преди да поръчаш</h2>
+
+      <details>
+        <summary>За каква възраст на детето е подходяща книгата?</summary>
+        <div class="faq-body">Книгата е за майки на деца от 3 до 18 години. Принципите за семейната система важат както за малки деца с избухвания, така и за затворени тийнейджъри — примерите покриват целия диапазон.</div>
+      </details>
+
+      <details>
+        <summary>Как се плаща и кога?</summary>
+        <div class="faq-body">Плащаш с наложен платеж — тоест в момента, в който получиш книгата от куриера на Спиди. Не е нужна карта и не плащаш нищо предварително.</div>
+      </details>
+
+      <details>
+        <summary>За колко време ще получа книгата?</summary>
+        <div class="faq-body">Изпращаме поръчките със Спиди обикновено до 1–3 работни дни — до офис на Спиди или до твой адрес, както предпочиташ.</div>
+      </details>
+
+      <details>
+        <summary>Ами ако книгата не ми помогне?</summary>
+        <div class="faq-body">Имаш 60 дни гаранция. Ако прецениш, че не е за теб, връщаме ти парите. Поемаме целия риск, за да можеш да опиташ спокойно.</div>
+      </details>
+
+      <details>
+        <summary>Това психологическа литература ли е, трудна ли е за четене?</summary>
+        <div class="faq-body">Не. Написана е на разбираем, човешки език — без сложни термини. Повечето майки я изчитат за няколко дни и веднага прилагат упражненията вкъщи.</div>
+      </details>
+
+      <div class="center" style="margin-top:32px !important;">
+        <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
+          Поръчай книгата сега →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DELIVERY ===== -->
+  <section class="sec-cream2">
+    <div class="wrap narrow">
+      <div class="eyebrow">Доставка</div>
+      <h2>Доставка със Спиди · наложен платеж</h2>
+      <p style="color:var(--muted) !important;">
+        Получаваш книгата с куриер на Спиди и плащаш при доставка (наложен платеж).
+        Избираш как ти е удобно — до офис на Спиди или до твоя адрес.
+      </p>
+      <div class="delivery-grid">
+        <div class="delivery-card">
+          <h3>До офис на Спиди</h3>
+          <div class="price-tag">≈ 3,50 €</div>
+          <p style="color:var(--muted) !important; font-size:0.95rem !important; margin-bottom:0 !important;">Вземаш пратката от удобен за теб офис.</p>
+        </div>
+        <div class="delivery-card">
+          <h3>До адрес</h3>
+          <div class="price-tag">≈ 4,50 €</div>
+          <p style="color:var(--muted) !important; font-size:0.95rem !important; margin-bottom:0 !important;">Куриерът носи книгата до вратата ти.</p>
+        </div>
+      </div>
+      <p class="delivery-note">
+        * Цените на доставката са ориентировъчни и се изчисляват по актуалната тарифа на
+        Спиди към момента на поръчката (за пратка с тегло на книга), плюс таксата за наложен платеж.
+        От 1 юли 2026 г. Спиди актуализира цените си — точната сума виждаш на финалната стъпка при поръчка.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final">
+    <div class="wrap narrow">
+      <div class="eyebrow">Последен шанс на тази цена</div>
+      <h2>Детето ти вече ти говори. Време е да го чуеш.</h2>
+      <p style="font-size:1.12rem !important;">
+        Остават само <b style="color:var(--gold) !important;">67 броя</b> на промоционална цена от
+        <b>15,90 €</b> вместо 24,90 €. С гаранция 60 дни нямаш какво да загубиш — освен напрежението вкъщи.
+      </p>
+      <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
+        Поръчай книгата за 15,90 € →
+      </a>
+      <div style="margin-top:14px !important;"><span class="btn-sub" style="color:#cfe3df !important;">🔒 Наложен платеж · Гаранция 60 дни · Доставка със Спиди</span></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-links">
+        <!-- Замени "#" с реалните URL адреси на твоите страници -->
+        <a href="#">Общи условия</a>
+        <a href="#">Политика за поверителност</a>
+        <a href="#">Условия за доставка</a>
+      </div>
+      <div>© 2026 · „Това, което детето ти не може да каже“. Всички права запазени.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
