@@ -3,23 +3,25 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Това, което детето ти не може да каже — книга за майки</title>
-<meta name="description" content="Разбери защо тревожността, агресията и затварянето при децата често са симптом на семейната система — и какво можеш да промениш още днес." />
+<title>Това, което детето ти не може да каже — книга от Дори Симитчиева</title>
+<meta name="description" content="Разбери как тревожността, агресията и симптомите при децата често са свързани със семейната система — и какво можеш да промениш още днес." />
 <style>
   /* ===== RESET / BASE ===== */
   *, *::before, *::after { box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
 
   :root {
-    --ink: #1f2a2e;
-    --teal: #1d6c63;
-    --teal-dark: #134a44;
-    --cream: #fbf6ee;
-    --cream-2: #f3ead9;
-    --coral: #e0664a;
-    --coral-dark: #c64f35;
-    --gold: #d9a441;
-    --muted: #5d6a6c;
-    --line: #e6ddcd;
+    --ink: #2b3550;
+    --navy: #2b3a63;
+    --navy-dark: #1f2c4d;
+    --coral: #d4795c;
+    --coral-dark: #bd6447;
+    --sage: #8ea896;
+    --sage-soft: #eef2ec;
+    --cream: #faf5ee;
+    --cream-2: #f2e9db;
+    --gold: #cf9b46;
+    --muted: #6a6f7d;
+    --line: #e8ddca;
   }
 
   html, body {
@@ -34,7 +36,7 @@
     overflow-x: hidden !important;
   }
 
-  h1, h2, h3, .sans, .btn, .badge, .nav, .pill, .price-tag, .faq-q {
+  h1, h2, h3, .sans, .btn, .badge, .nav, .pill, .price-tag, .faq-q, .eyebrow, summary {
     font-family: "Helvetica Neue", Arial, sans-serif !important;
   }
 
@@ -44,13 +46,12 @@
   .wrap { max-width: 1040px !important; margin: 0 auto !important; padding: 0 22px !important; }
   .narrow { max-width: 760px !important; margin: 0 auto !important; }
 
-  h1 { font-size: 2.55rem !important; line-height: 1.12 !important; font-weight: 800 !important; letter-spacing: -0.5px !important; }
-  h2 { font-size: 1.9rem !important; line-height: 1.2 !important; font-weight: 800 !important; letter-spacing: -0.3px !important; }
+  h1 { font-size: 2.55rem !important; line-height: 1.12 !important; font-weight: 800 !important; letter-spacing: -0.5px !important; color: var(--navy) !important; }
+  h2 { font-size: 1.9rem !important; line-height: 1.2 !important; font-weight: 800 !important; letter-spacing: -0.3px !important; color: var(--navy) !important; }
   h3 { font-size: 1.2rem !important; font-weight: 700 !important; }
   p  { margin-bottom: 1rem !important; }
 
   .eyebrow {
-    font-family: "Helvetica Neue", Arial, sans-serif !important;
     text-transform: uppercase !important;
     letter-spacing: 2px !important;
     font-size: 0.78rem !important;
@@ -73,16 +74,16 @@
     cursor: pointer !important;
     text-align: center !important;
     letter-spacing: 0.3px !important;
-    box-shadow: 0 12px 28px rgba(224,102,74,0.35) !important;
+    box-shadow: 0 12px 28px rgba(212,121,92,0.35) !important;
     transition: transform .15s ease, box-shadow .15s ease, background .15s ease !important;
     line-height: 1.25 !important;
   }
-  .btn:hover { background: var(--coral-dark) !important; transform: translateY(-2px) !important; box-shadow: 0 16px 34px rgba(224,102,74,0.45) !important; }
+  .btn:hover { background: var(--coral-dark) !important; transform: translateY(-2px) !important; box-shadow: 0 16px 34px rgba(212,121,92,0.45) !important; }
   .btn-sub { display: block !important; font-size: 0.82rem !important; font-weight: 600 !important; letter-spacing: 1px !important; color: var(--muted) !important; margin-top: 12px !important; text-align: center !important; font-family: "Helvetica Neue", Arial, sans-serif !important; }
 
   /* ===== URGENCY BAR ===== */
   .topbar {
-    background: var(--teal-dark) !important;
+    background: var(--navy) !important;
     color: #fff !important;
     text-align: center !important;
     font-family: "Helvetica Neue", Arial, sans-serif !important;
@@ -99,35 +100,21 @@
   .hero-col { flex: 1 1 360px !important; }
   .hero h1 { margin-bottom: 18px !important; }
   .hero-lead { font-size: 1.22rem !important; color: var(--muted) !important; margin-bottom: 26px !important; }
-  .hero .btn { width: auto !important; }
+  .author-line { font-family: "Helvetica Neue", Arial, sans-serif !important; font-size: 0.92rem !important; letter-spacing: 1px !important; text-transform: uppercase !important; color: var(--sage) !important; font-weight: 700 !important; margin-bottom: 10px !important; }
 
   .stars { color: var(--gold) !important; font-size: 1.1rem !important; letter-spacing: 2px !important; }
   .rating-line { font-family: "Helvetica Neue", Arial, sans-serif !important; font-size: 0.92rem !important; color: var(--muted) !important; margin-bottom: 20px !important; }
 
-  /* ===== IMAGE PLACEHOLDERS ===== */
-  .book-shot {
-    background: linear-gradient(135deg, #2a7c72 0%, #134a44 100%) !important;
-    border-radius: 18px !important;
-    aspect-ratio: 4 / 5 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: rgba(255,255,255,0.85) !important;
-    font-family: "Helvetica Neue", Arial, sans-serif !important;
-    font-size: 0.85rem !important;
-    text-align: center !important;
-    padding: 20px !important;
-    box-shadow: 0 26px 50px rgba(19,74,68,0.32) !important;
-    overflow: hidden !important;
-  }
-  .book-shot img { width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 18px !important; }
+  /* ===== PRODUCT IMAGES ===== */
+  .shot { border-radius: 16px !important; overflow: hidden !important; }
+  .shot img { width: 100% !important; height: auto !important; display: block !important; }
+  .hero-shot img { max-width: 420px !important; margin: 0 auto !important; filter: drop-shadow(0 30px 45px rgba(43,58,99,0.28)) !important; border-radius: 6px !important; }
+  .soft-shot img { border-radius: 16px !important; box-shadow: 0 24px 45px rgba(43,58,99,0.18) !important; }
 
   /* ===== SECTIONS ===== */
   section { padding: 64px 0 !important; }
   .sec-cream2 { background: var(--cream-2) !important; }
-  .sec-teal { background: var(--teal) !important; color: #fff !important; }
-  .sec-teal .eyebrow { color: var(--gold) !important; }
-  .sec-teal h2, .sec-teal p { color: #fff !important; }
+  .sec-sage { background: var(--sage-soft) !important; }
   .center { text-align: center !important; }
 
   /* Problem list */
@@ -142,7 +129,7 @@
     font-size: 1.02rem !important;
   }
 
-  .lead-after { font-size: 1.12rem !important; margin-top: 26px !important; font-style: italic !important; color: var(--teal-dark) !important; }
+  .lead-after { font-size: 1.12rem !important; margin-top: 26px !important; font-style: italic !important; color: var(--navy) !important; }
 
   /* Benefits */
   .benefits { display: flex !important; gap: 24px !important; flex-wrap: wrap !important; margin-top: 36px !important; }
@@ -152,21 +139,34 @@
     border: 1px solid var(--line) !important;
     border-radius: 16px !important;
     padding: 30px 26px !important;
-    box-shadow: 0 8px 20px rgba(31,42,46,0.05) !important;
+    box-shadow: 0 8px 20px rgba(43,58,99,0.05) !important;
   }
   .benefit .num {
     font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-weight: 800 !important;
     font-size: 1.05rem !important;
     color: #fff !important;
-    background: var(--teal) !important;
+    background: var(--sage) !important;
     width: 44px !important; height: 44px !important;
     border-radius: 50% !important;
     display: flex !important; align-items: center !important; justify-content: center !important;
     margin-bottom: 18px !important;
   }
-  .benefit h3 { margin-bottom: 10px !important; color: var(--teal-dark) !important; }
+  .benefit h3 { margin-bottom: 10px !important; color: var(--navy) !important; }
   .benefit p { color: var(--muted) !important; margin-bottom: 0 !important; font-size: 1rem !important; }
+
+  /* Method pills */
+  .methods { display: flex !important; gap: 12px !important; flex-wrap: wrap !important; justify-content: center !important; margin-top: 26px !important; }
+  .pill {
+    background: #fff !important;
+    border: 1px solid var(--line) !important;
+    color: var(--navy) !important;
+    border-radius: 50px !important;
+    padding: 9px 18px !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.4px !important;
+  }
 
   /* Testimonials */
   .reviews { display: flex !important; gap: 24px !important; flex-wrap: wrap !important; margin-top: 36px !important; }
@@ -176,17 +176,17 @@
     border-radius: 16px !important;
     padding: 26px !important;
     border: 1px solid var(--line) !important;
-    box-shadow: 0 8px 20px rgba(31,42,46,0.05) !important;
+    box-shadow: 0 8px 20px rgba(43,58,99,0.05) !important;
   }
   .review .stars { font-size: 0.98rem !important; margin-bottom: 12px !important; display: block !important; }
   .review p { font-size: 1.02rem !important; font-style: italic !important; margin-bottom: 16px !important; }
-  .review .who { font-family: "Helvetica Neue", Arial, sans-serif !important; font-weight: 700 !important; font-size: 0.92rem !important; color: var(--teal-dark) !important; font-style: normal !important; }
+  .review .who { font-family: "Helvetica Neue", Arial, sans-serif !important; font-weight: 700 !important; font-size: 0.92rem !important; color: var(--navy) !important; font-style: normal !important; }
   .review .who span { display: block !important; font-weight: 500 !important; color: var(--muted) !important; font-size: 0.82rem !important; }
 
   /* Guarantee */
   .guarantee-box {
     background: #fff !important;
-    border: 2px dashed var(--teal) !important;
+    border: 2px dashed var(--sage) !important;
     border-radius: 18px !important;
     padding: 38px 30px !important;
     text-align: center !important;
@@ -197,7 +197,7 @@
     font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-weight: 800 !important;
     color: #fff !important;
-    background: var(--teal) !important;
+    background: var(--sage) !important;
     display: inline-block !important;
     padding: 10px 22px !important;
     border-radius: 50px !important;
@@ -211,7 +211,7 @@
     background: #fff !important;
     border-radius: 20px !important;
     border: 1px solid var(--line) !important;
-    box-shadow: 0 24px 50px rgba(31,42,46,0.12) !important;
+    box-shadow: 0 24px 50px rgba(43,58,99,0.12) !important;
     padding: 40px 34px !important;
     max-width: 560px !important;
     margin: 0 auto !important;
@@ -233,9 +233,9 @@
     margin-bottom: 16px !important;
   }
   .offer-card .btn { width: 100% !important; margin-top: 18px !important; }
-  .incl { list-style: none !important; text-align: left !important; max-width: 360px !important; margin: 22px auto 0 !important; }
+  .incl { list-style: none !important; text-align: left !important; max-width: 380px !important; margin: 22px auto 0 !important; }
   .incl li { padding: 8px 0 8px 30px !important; position: relative !important; font-size: 1rem !important; }
-  .incl li::before { content: "✓" !important; position: absolute !important; left: 0 !important; color: var(--teal) !important; font-weight: 800 !important; }
+  .incl li::before { content: "✓" !important; position: absolute !important; left: 0 !important; color: var(--sage) !important; font-weight: 800 !important; }
 
   /* Friend bundle */
   .bundle {
@@ -259,7 +259,7 @@
   }
   .bundle-price { font-family: "Helvetica Neue", Arial, sans-serif !important; margin: 14px 0 !important; }
   .bundle-price .b-old { color: var(--muted) !important; text-decoration: line-through !important; font-size: 1.1rem !important; }
-  .bundle-price .b-now { font-weight: 800 !important; font-size: 2.2rem !important; color: var(--teal-dark) !important; }
+  .bundle-price .b-now { font-weight: 800 !important; font-size: 2.2rem !important; color: var(--navy) !important; }
 
   /* FAQ */
   details {
@@ -272,10 +272,9 @@
   summary {
     cursor: pointer !important;
     padding: 18px 22px !important;
-    font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-weight: 700 !important;
     font-size: 1.05rem !important;
-    color: var(--teal-dark) !important;
+    color: var(--navy) !important;
     list-style: none !important;
     position: relative !important;
     padding-right: 48px !important;
@@ -288,17 +287,17 @@
   /* Delivery */
   .delivery-grid { display: flex !important; gap: 20px !important; flex-wrap: wrap !important; margin-top: 26px !important; }
   .delivery-card { flex: 1 1 240px !important; background: #fff !important; border: 1px solid var(--line) !important; border-radius: 14px !important; padding: 24px !important; }
-  .delivery-card h3 { color: var(--teal-dark) !important; margin-bottom: 8px !important; }
-  .delivery-card .price-tag { font-family: "Helvetica Neue", Arial, sans-serif !important; font-weight: 800 !important; color: var(--coral) !important; font-size: 1.25rem !important; }
+  .delivery-card h3 { color: var(--navy) !important; margin-bottom: 8px !important; }
+  .delivery-card .price-tag { font-weight: 800 !important; color: var(--coral) !important; font-size: 1.25rem !important; }
   .delivery-note { font-size: 0.9rem !important; color: var(--muted) !important; margin-top: 18px !important; }
 
   /* Final CTA */
-  .final { background: var(--teal-dark) !important; color: #fff !important; text-align: center !important; }
+  .final { background: var(--navy) !important; color: #fff !important; text-align: center !important; }
   .final h2, .final p { color: #fff !important; }
   .final .btn { margin-top: 24px !important; }
 
   /* Footer */
-  footer { background: var(--ink) !important; color: #cfd6d6 !important; padding: 40px 0 !important; font-family: "Helvetica Neue", Arial, sans-serif !important; font-size: 0.9rem !important; text-align: center !important; }
+  footer { background: var(--navy-dark) !important; color: #c8cfdf !important; padding: 40px 0 !important; font-family: "Helvetica Neue", Arial, sans-serif !important; font-size: 0.9rem !important; text-align: center !important; }
   footer a { color: #fff !important; text-decoration: underline !important; margin: 0 10px !important; display: inline-block !important; }
   .foot-links { margin-bottom: 16px !important; }
 
@@ -308,10 +307,10 @@
     h1 { font-size: 2rem !important; }
     h2 { font-size: 1.55rem !important; }
     section { padding: 44px 0 !important; }
-    .hero { padding: 36px 0 44px !important; }
+    .hero { padding: 32px 0 44px !important; }
     .hero-grid { gap: 30px !important; }
     .hero-col-img { order: -1 !important; }
-    .book-shot { max-width: 320px !important; margin: 0 auto !important; }
+    .hero-shot img { max-width: 280px !important; }
     .btn { width: 100% !important; padding: 18px 24px !important; font-size: 1.08rem !important; }
     .price-now { font-size: 2.6rem !important; }
     .offer-card, .bundle, .guarantee-box { padding: 28px 20px !important; }
@@ -329,12 +328,12 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div class="hero-col">
-        <div class="eyebrow">Книга за майки на деца от 3 до 18 г.</div>
+        <div class="author-line">Дори Симитчиева · метод АБХЯСА</div>
         <h1>Това, което детето&nbsp;ти не може да каже</h1>
         <p class="hero-lead">
           Тревожността, агресията и затварянето при децата рядко са „просто характер“.
-          Най-често те са послание от цялата семейна система. Тази книга ти помага да
-          разчетеш посланието — и да върнеш спокойствието вкъщи.
+          Най-често те са симптом на цялата семейна система. Тази книга ти помага да
+          разчетеш посланието зад поведението — и да върнеш спокойствието вкъщи.
         </p>
         <div class="rating-line">
           <span class="stars">★★★★★</span> &nbsp;4.9/5 от над 1 200 майки
@@ -347,14 +346,11 @@
 
       <div class="hero-col hero-col-img">
         <!-- ============================================================= -->
-        <!--  ПРОДУКТОВА СНИМКА 1 — корица на книгата.                      -->
-        <!--  Замени блока по-долу с: <img src="ТВОЯТА-СНИМКА.jpg"          -->
-        <!--  alt="Книга Това, което детето ти не може да каже" />         -->
-        <!--  (ChatGPT линковете не са реални изображения и няма да се      -->
-        <!--   заредят — качи файла в платформата и сложи неговия URL.)     -->
+        <!--  СНИМКА 1 — 3D mockup на корицата (изправена книга).          -->
+        <!--  Качи файла в платформата с име korica-3d.png ИЛИ смени src.  -->
         <!-- ============================================================= -->
-        <div class="book-shot">
-          [ Тук качи СНИМКА 1 — корицата на книгата ]
+        <div class="shot hero-shot">
+          <img src="korica-3d.png" alt="Книга „Това, което детето ти не може да каже“ от Дори Симитчиева" />
         </div>
       </div>
     </div>
@@ -362,38 +358,39 @@
 
   <!-- ===== PROBLEM ===== -->
   <section>
-    <div class="wrap narrow">
-      <div class="eyebrow">Познато ли ти е?</div>
-      <h2>Опитваш всичко, а нищо не работи задълго</h2>
-      <p style="color:var(--muted) !important;">
-        Говориш спокойно, после повишаваш тон. Награждаваш, наказваш, преговаряш.
-        За кратко става по-добре — после всичко се връща. И тихо се питаш дали грешката е в теб.
-      </p>
-      <ul class="pain-list">
-        <li>Детето избухва за дребни неща, а ти вече не знаеш кога ще е следващият път.</li>
-        <li>Затваря се в стаята и в себе си — а на въпроса „какво има?“ отговаря с „нищо“.</li>
-        <li>Вкъщи има постоянно напрежение и конфликти, които изтощават цялото семейство.</li>
-        <li>Чувстваш, че не се разбирате, и че между вас расте невидима стена.</li>
-        <li>Прочела си статии и съвети, но те не обясняват <em>защо</em> се случва точно при вас.</li>
-      </ul>
-      <p class="lead-after">
-        Истината, която малко хора казват: поведението на детето често не е проблемът — то е симптом.
-      </p>
+    <div class="wrap hero-grid">
+      <div class="hero-col">
+        <!-- ============================================================= -->
+        <!--  СНИМКА 2 — двойката, която чете книгата на масата.           -->
+        <!--  Качи с име dvoika-cheteat.jpg ИЛИ смени src.                 -->
+        <!-- ============================================================= -->
+        <div class="shot soft-shot">
+          <img src="dvoika-cheteat.jpg" alt="Родители четат книгата заедно" />
+        </div>
+      </div>
+      <div class="hero-col">
+        <div class="eyebrow">Познато ли ти е?</div>
+        <h2>Опитваш всичко, а нищо не работи задълго</h2>
+        <p style="color:var(--muted) !important;">
+          Говориш спокойно, после повишаваш тон. Награждаваш, наказваш, преговаряш.
+          За кратко става по-добре — после всичко се връща. И тихо се питаш дали грешката е в теб.
+        </p>
+        <ul class="pain-list">
+          <li>Детето избухва за дребни неща и не знаеш кога е следващият път.</li>
+          <li>Затваря се в стаята и в себе си — на „какво има?“ отговаря с „нищо“.</li>
+          <li>Вкъщи има постоянно напрежение и конфликти, които изтощават всички.</li>
+          <li>Чувстваш, че не се разбирате и че между вас расте невидима стена.</li>
+        </ul>
+        <p class="lead-after">
+          Истината, която малко хора казват: поведението на детето често не е проблемът — то е симптом.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- ===== SOLUTION ===== -->
-  <section class="sec-teal">
+  <section class="sec-sage">
     <div class="wrap hero-grid">
-      <div class="hero-col">
-        <!-- ============================================================= -->
-        <!--  ПРОДУКТОВА СНИМКА 2 — книгата отворена / в ръка / mockup.     -->
-        <!--  Замени с: <img src="ТВОЯТА-СНИМКА.jpg" alt="..."/>           -->
-        <!-- ============================================================= -->
-        <div class="book-shot" style="background:linear-gradient(135deg,#e0664a 0%,#c64f35 100%) !important;">
-          [ Тук качи СНИМКА 2 — книгата отворена / mockup ]
-        </div>
-      </div>
       <div class="hero-col">
         <div class="eyebrow">Решението</div>
         <h2>Виж детето през семейната система</h2>
@@ -402,13 +399,23 @@
           че детето е огледало на семейството. Когато се промени системата — се променя и детето.
         </p>
         <p>
-          Без сложни термини и без обвинения. С ясни обяснения, реални примери и упражнения,
-          които можеш да приложиш още същата вечер — за да разбираш по-добре детето си,
-          себе си и динамиките вкъщи.
+          В основата ѝ е <strong>методът АБХЯСА</strong> — авторският подход на Дори Симитчиева,
+          който свързва семейните констелации, трансперсоналната психология и духовните принципи
+          в една ясна система. Без сложни термини и без обвинения — с реални примери и упражнения,
+          които можеш да приложиш още същата вечер.
         </p>
         <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
           Започни промяната днес →
         </a>
+      </div>
+      <div class="hero-col">
+        <!-- ============================================================= -->
+        <!--  СНИМКА 3 — усмихната жена, която чете книгата на дивана.     -->
+        <!--  Качи с име mayka-chete.jpg ИЛИ смени src.                    -->
+        <!-- ============================================================= -->
+        <div class="shot soft-shot">
+          <img src="mayka-chete.jpg" alt="Майка чете книгата спокойно у дома" />
+        </div>
       </div>
     </div>
   </section>
@@ -444,6 +451,12 @@
           и водиш семейството си от позиция на спокойствие, а не на страх.
         </p>
       </div>
+    </div>
+    <p class="center" style="margin-top:42px !important; color:var(--muted) !important; font-family:'Helvetica Neue',Arial,sans-serif !important; font-size:0.9rem !important; letter-spacing:1px !important; text-transform:uppercase !important; font-weight:700 !important;">Методът АБХЯСА обединява</p>
+    <div class="wrap methods">
+      <span class="pill">Семейни констелации</span>
+      <span class="pill">Трансперсонална психология</span>
+      <span class="pill">Духовни принципи</span>
     </div>
   </section>
 
@@ -513,19 +526,19 @@
       <!-- ===== FRIEND BUNDLE ===== -->
       <div class="bundle">
         <span class="tag">⭐ НАЙ-ИЗГОДНО · ПОДАРИ НА ПРИЯТЕЛКА</span>
-        <h3 style="color:var(--teal-dark) !important; margin-top:8px !important;">Вземи 2 книги — втората с 50% отстъпка</h3>
+        <h3 style="color:var(--navy) !important; margin-top:8px !important;">Вземи 2 книги — втората с 50% отстъпка</h3>
         <p style="color:var(--muted) !important;">
           Познаваш майка, на която ѝ е тежко точно сега? Поръчай две книги в една пратка
           и втората е на половин цена. Една за теб, една за приятелка.
         </p>
         <div class="bundle-price">
-          <span class="b-old">32,80 €</span> &nbsp;
+          <span class="b-old">31,80 €</span> &nbsp;
           <span class="b-now">23,85 €</span>
         </div>
         <p style="font-size:0.92rem !important; color:var(--muted) !important;">
-          Първа книга 15,90 € + втора книга само 7,95 € (–50%). Спестяваш още 8,95 €.
+          Първа книга 15,90 € + втора книга само 7,95 € (–50%). Спестяваш още 7,95 €.
         </p>
-        <a class="btn" style="background:var(--teal) !important; box-shadow:0 12px 28px rgba(29,108,99,0.35) !important;" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
+        <a class="btn" style="background:var(--sage) !important; box-shadow:0 12px 28px rgba(142,168,150,0.4) !important;" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
           Искам 2 книги за 23,85 € →
         </a>
         <span class="btn-sub">Идеален подарък — с грижа към приятелка</span>
@@ -534,7 +547,7 @@
   </section>
 
   <!-- ===== GUARANTEE ===== -->
-  <section class="sec-cream2">
+  <section class="sec-sage">
     <div class="wrap">
       <div class="guarantee-box">
         <div class="seal">🛡️ ГАРАНЦИЯ 60 ДНИ</div>
@@ -620,7 +633,7 @@
   <section class="final">
     <div class="wrap narrow">
       <div class="eyebrow">Последен шанс на тази цена</div>
-      <h2>Детето ти вече ти говори. Време е да го чуеш.</h2>
+      <h2 style="color:#fff !important;">Детето ти вече ти говори. Време е да го чуеш.</h2>
       <p style="font-size:1.12rem !important;">
         Остават само <b style="color:var(--gold) !important;">67 броя</b> на промоционална цена от
         <b>15,90 €</b> вместо 24,90 €. С гаранция 60 дни нямаш какво да загубиш — освен напрежението вкъщи.
@@ -628,7 +641,7 @@
       <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
         Поръчай книгата за 15,90 € →
       </a>
-      <div style="margin-top:14px !important;"><span class="btn-sub" style="color:#cfe3df !important;">🔒 Наложен платеж · Гаранция 60 дни · Доставка със Спиди</span></div>
+      <div style="margin-top:14px !important;"><span class="btn-sub" style="color:#c8cfdf !important;">🔒 Наложен платеж · Гаранция 60 дни · Доставка със Спиди</span></div>
     </div>
   </section>
 
@@ -641,7 +654,7 @@
         <a href="#">Политика за поверителност</a>
         <a href="#">Условия за доставка</a>
       </div>
-      <div>© 2026 · „Това, което детето ти не може да каже“. Всички права запазени.</div>
+      <div>© 2026 · Дори Симитчиева · „Това, което детето ти не може да каже“. Всички права запазени.</div>
     </div>
   </footer>
 
