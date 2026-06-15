@@ -39,6 +39,9 @@
   .hero-grid { display: flex !important; gap: 48px !important; align-items: center !important; flex-wrap: wrap !important; }
   .hero-col { flex: 1 1 360px !important; }
   .hero h1 { margin-bottom: 18px !important; }
+  .hero-top { max-width: 960px !important; margin: 0 auto 44px !important; }
+  .hero-top .author-line { color: var(--coral) !important; }
+  .hero-top h1 { font-size: 3rem !important; margin-bottom: 0 !important; }
   .hero-lead { font-size: 1.22rem !important; color: var(--muted) !important; margin-bottom: 26px !important; }
   .author-line { font-family: "Helvetica Neue", Arial, sans-serif !important; font-size: 0.92rem !important; letter-spacing: 1px !important; text-transform: uppercase !important; color: var(--sage) !important; font-weight: 700 !important; margin-bottom: 10px !important; }
   /* Stock counter bar */
@@ -226,6 +229,8 @@
   @media (max-width: 760px) {
     html, body { font-size: 17px !important; }
     h1 { font-size: 2rem !important; }
+    .hero-top h1 { font-size: 2rem !important; }
+    .hero-top { margin-bottom: 28px !important; }
     h2 { font-size: 1.55rem !important; }
     section { padding: 44px 0 !important; }
     .hero { padding: 32px 0 44px !important; }
@@ -249,15 +254,19 @@
 
   <!-- ===== URGENCY BAR ===== -->
   <div class="topbar">
-    ✨ По-спокойно, уверено и щастливо дете — започни днес. Остават само <b><span class="stock-count">67</span> броя</b> на намалена цена · 90-дневна гаранция.
+    ✨ По-спокойно, уверено и щастливо дете с книгата „Това, което детето ти не може да каже“. Остават само <b><span class="stock-count">67</span> броя</b> на намалена цена · 90-дневна гаранция.
   </div>
 
   <!-- ===== 1. HERO / HOOK ===== -->
   <header class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-col">
+    <div class="wrap">
+      <div class="hero-top center">
         <div class="author-line">За майки на деца от 3 до 18 години</div>
         <h1>Разбери какво ти казва детето ти зад изблиците, свитостта и агресията — и върни спокойствието вкъщи</h1>
+      </div>
+    </div>
+    <div class="wrap hero-grid">
+      <div class="hero-col">
         <p class="hero-lead">
           Ако се чувстваш безсилна пред внезапните избухвания, затварянето в себе си или
           агресията на детето си и търсиш начин да му помогнеш — <strong>Система Огледало™</strong>
