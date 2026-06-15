@@ -243,7 +243,7 @@
 
   <!-- ===== URGENCY BAR ===== -->
   <div class="topbar">
-    ✨ По-спокойно, уверено и щастливо дете — започни днес. Остават само <b>67 броя</b> на намалена цена · 90-дневна гаранция.
+    ✨ По-спокойно, уверено и щастливо дете — започни днес. Остават само <b><span class="stock-count">67</span> броя</b> на намалена цена · 90-дневна гаранция.
   </div>
 
   <!-- ===== 1. HERO / HOOK ===== -->
@@ -264,7 +264,7 @@
           <li>връщаш мира и близостта в семейството</li>
         </ul>
         <div class="rating-line">
-          <span class="stars">★★★★★</span> &nbsp;4.9/5 от над 1 200 майки
+          <span class="stars">★★★★★</span> &nbsp;4,9/5 от над 1 200 майки
         </div>
         <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">Искам тази книга →</a>
         <span class="btn-sub">🛡️ 90-дневна гаранция · Плащаш при доставка</span>
@@ -430,7 +430,7 @@
       </div>
 
       <div class="offer-card">
-        <span class="save-pill">ПЕСТИШ 9,00 € + 2 БОНУСА БЕЗПЛАТНО</span>
+        <span class="save-pill">СПЕСТЯВАШ 9,00 € + 2 БОНУСА БЕЗПЛАТНО</span>
         <div class="price-old">24,90 € / 48,70 лв</div>
         <div class="price-now">15,90&nbsp;<span class="price-cur">€</span></div>
         <div class="price-lev">31,10 лв</div>
@@ -497,7 +497,7 @@
   <section class="sec-cream2">
     <div class="wrap center">
       <div class="eyebrow">За кого е тази книга</div>
-      <h2>Позна ли се?</h2>
+      <h2>Разпозна ли се?</h2>
     </div>
     <div class="wrap" style="margin-top:30px !important;">
       <div class="age-card">
@@ -576,7 +576,7 @@
       <ul class="loss-list">
         <li>Това, което днес е истерия или мълчание, утре може да стане тревожност, която не го пуска.</li>
         <li>Детето свиква да вярва, че с него „нещо не е наред“ — и носи този етикет с години.</li>
-        <li>Стената между вас става все по-висока, докато един ден стане трудно да я съборите.</li>
+        <li>Стената между вас става все по-висока, докато един ден стане трудно да я събориш.</li>
         <li>А ти продължаваш да се бориш отвън — с любов, но не на правилното място.</li>
       </ul>
       <p style="max-width:680px !important; margin:30px auto 0 !important; font-size:1.15rem !important;">
@@ -602,7 +602,7 @@
       <div class="benefit"><span class="sci-tag">Предава се</span><h3>Тревогата често е по-стара от детето</h3><p>Тревожността и болката могат да преминават от поколение на поколение. Това, което детето носи, понякога е тръгнало далеч преди да се роди. Затова не можеш да си виновна за нещо, което не е започнало с теб.</p></div>
       <div class="benefit"><span class="sci-tag">Лекува се чрез теб</span><h3>Детето се успокоява заедно с теб</h3><p>Детето усеща състоянието ти, преди да чуе думите ти. Когато ти намериш своя покой, неговото малко сърце се успокоява заедно с твоето. Ти не си вината — ти си спокойствието, което то търси.</p></div>
     </div>
-    <p class="sci-note">Книгата взема това разбиране и го превръща в прости стъпки за вкъщи — за да знаеш не само „защо“, но и „какво да направя“.</p>
+    <p class="sci-note">Книгата взема това разбиране и го превръща в прости стъпки за вкъщи — за да знаеш не само „защо“, но и „какво да направиш“.</p>
   </section>
 
   <!-- ===== 12. SOCIAL PROOF ===== -->
@@ -670,7 +670,7 @@
         </div>
       </div>
       <p style="font-size:1.02rem !important; color:#c8cfdf !important;">
-        Остават само <b style="color:var(--gold) !important;">67 броя</b> на цена
+        Остават само <b style="color:var(--gold) !important;"><span class="stock-count">67</span> броя</b> на цена
         <b>15,90 € / 31,10 лв</b> вместо 24,90 € — с 2 бонуса и 90-дневна гаранция.
       </p>
       <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">Поръчай книгата за 15,90 € →</a>
@@ -750,6 +750,40 @@
         setAll("cd-s", pad(Math.floor((diff % 60000) / 1000)));
       }
       tick(); setInterval(tick, 1000);
+    })();
+  </script>
+
+  <!-- ===== STOCK COUNTER (отброява от 67 надолу) ===== -->
+  <script>
+    (function () {
+      var SKEY = "deteto_stock";
+      var START = 67;     // начален брой
+      var FLOOR = 8;      // не пада под това число
+      var STEP_MS = 6 * 60 * 1000; // спада с 1 на всеки ~6 минути (натрупване между посещения)
+      var now = Date.now();
+      var data;
+      try { data = JSON.parse(localStorage.getItem(SKEY)); } catch (e) { data = null; }
+      if (!data || typeof data.n !== "number") { data = { n: START, t: now }; }
+      var dropped = Math.floor((now - data.t) / STEP_MS);
+      if (dropped > 0) { data.n = Math.max(FLOOR, data.n - dropped); data.t = now; }
+      localStorage.setItem(SKEY, JSON.stringify(data));
+      function render() {
+        var els = document.querySelectorAll(".stock-count");
+        for (var i = 0; i < els.length; i++) els[i].textContent = data.n;
+      }
+      render();
+      function scheduleTick() {
+        var delay = (70 + Math.random() * 90) * 1000; // на всеки 70–160 сек намалява с 1 на живо
+        setTimeout(function () {
+          if (data.n > FLOOR) {
+            data.n -= 1; data.t = Date.now();
+            localStorage.setItem(SKEY, JSON.stringify(data));
+            render();
+          }
+          scheduleTick();
+        }, delay);
+      }
+      scheduleTick();
     })();
   </script>
 
