@@ -144,6 +144,24 @@
   .loss-list { list-style: none !important; max-width: 760px !important; margin: 24px auto 0 !important; text-align: left !important; }
   .loss-list li { background: rgba(255,255,255,0.07) !important; border-left: 4px solid var(--coral) !important; border-radius: 10px !important; padding: 14px 18px !important; margin-bottom: 12px !important; color: #f1ece4 !important; font-size: 1.04rem !important; }
 
+  /* Mirror system — question shift */
+  .shift { max-width: 720px !important; margin: 28px auto 0 !important; display: flex !important; gap: 16px !important; align-items: stretch !important; flex-wrap: wrap !important; }
+  .shift .sh { flex: 1 1 240px !important; border-radius: 14px !important; padding: 22px !important; text-align: center !important; }
+  .shift .sh.from { background: #fff !important; border: 1px solid var(--line) !important; }
+  .shift .sh.to { background: var(--navy) !important; }
+  .shift .lab { font-size: 0.7rem !important; text-transform: uppercase !important; letter-spacing: 1.5px !important; font-weight: 800 !important; margin-bottom: 10px !important; display: block !important; font-family: "Helvetica Neue", Arial, sans-serif !important; }
+  .shift .sh.from .lab { color: var(--coral) !important; }
+  .shift .sh.to .lab { color: var(--gold) !important; }
+  .shift .sh q { font-family: "Georgia", serif !important; font-style: italic !important; font-size: 1.15rem !important; line-height: 1.45 !important; quotes: none !important; }
+  .shift .sh.from q { color: var(--muted) !important; }
+  .shift .sh.to q { color: #fff !important; }
+
+  /* Mirror system — whispers */
+  .whispers { max-width: 680px !important; margin: 32px auto 0 !important; background: #fff !important; border: 1px solid var(--line) !important; border-left: 5px solid var(--coral) !important; border-radius: 14px !important; padding: 26px 30px !important; }
+  .whispers .wlead { font-weight: 700 !important; color: var(--navy) !important; margin-bottom: 14px !important; }
+  .whispers ul { list-style: none !important; }
+  .whispers li { font-family: "Georgia", serif !important; font-style: italic !important; font-size: 1.12rem !important; color: var(--navy) !important; padding: 7px 0 !important; }
+
   /* Bonus stack */
   .bonus-grid { display: flex !important; flex-direction: column !important; gap: 16px !important; max-width: 760px !important; margin: 30px auto 0 !important; }
   .bonus-card { display: flex !important; align-items: center !important; gap: 20px !important; background: #fff !important; border: 1px solid var(--line) !important; border-radius: 14px !important; padding: 20px 22px !important; box-shadow: 0 8px 20px rgba(43,58,99,0.05) !important; }
@@ -385,6 +403,83 @@
     </div>
   </section>
 
+  <!-- ===== MIRROR SYSTEM ===== -->
+  <section class="sec-cream2">
+    <div class="wrap center">
+      <div class="eyebrow">Уникалният модел в книгата</div>
+      <h2>🪞 Система Огледало™</h2>
+      <p style="max-width:720px !important; margin:14px auto 0 !important; color:var(--muted) !important;">
+        Авторски модел, който гледа на трудното поведение не като на проблем за потискане,
+        а като на сигнал за разбиране. Той сменя само един въпрос — и това променя всичко.
+      </p>
+    </div>
+
+    <!-- Question shift -->
+    <div class="wrap">
+      <div class="shift">
+        <div class="sh from">
+          <span class="lab">От</span>
+          <q>„Какво му има на детето ми?“</q>
+        </div>
+        <div class="sh to">
+          <span class="lab">Към</span>
+          <q>„Какво се опитва да ми покаже това поведение?“</q>
+        </div>
+      </div>
+      <p class="center" style="max-width:680px !important; margin:24px auto 0 !important; color:var(--muted) !important;">
+        Когато гледаш на симптома като на послание, а не като на враг, напрежението започва да утихва.
+        Вместо обвинение идва разбиране. Вместо паника — посока. Вместо борба — по-дълбока връзка.
+      </p>
+    </div>
+
+    <!-- Three levels -->
+    <div class="achieve">
+      <div class="achieve-item">
+        <div class="ai-num">1</div>
+        <div class="ai-body">
+          <h3>Видимото поведение</h3>
+          <p style="color:var(--muted) !important; margin-bottom:0 !important;">Това, което виждаш отвън — избухвания, плач, агресия, инат, тревожност, страхове, проблеми със съня, затваряне или телесен симптом.</p>
+        </div>
+      </div>
+      <div class="achieve-item">
+        <div class="ai-num">2</div>
+        <div class="ai-body">
+          <h3>Скритото преживяване</h3>
+          <p style="color:var(--muted) !important; margin-bottom:0 !important;">Какво стои под поведението — страх, несигурност, нужда от внимание, усещане за отхвърляне, претоварване или вътрешен конфликт.</p>
+        </div>
+      </div>
+      <div class="achieve-item">
+        <div class="ai-num">3</div>
+        <div class="ai-body">
+          <h3>Семейното огледало</h3>
+          <p style="color:var(--muted) !important; margin-bottom:0 !important;">Дали детето не отразява нещо по-голямо — напрежение между родителите, неизказана болка, промяна в дома или натрупан стрес в семейството.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="center" style="max-width:680px !important; margin:26px auto 0 !important; font-size:1.12rem !important; color:var(--navy) !important;">
+      Система Огледало™ не обвинява родителите. Не казва „ти си виновен“. Казва:
+      <em>детето често показва там, където семейството има нужда от повече спокойствие и свързване.</em>
+    </p>
+
+    <!-- Whispers -->
+    <div class="whispers">
+      <p class="wlead">Зад трудното поведение често стои дете, което още не знае как да каже:</p>
+      <ul>
+        <li>„Страх ме е.“</li>
+        <li>„Не се чувствам сигурно.“</li>
+        <li>„Имам нужда да ме видиш.“</li>
+        <li>„Нещо в нашия дом ме напряга.“</li>
+        <li>„Не мога да се справя сам с това, което усещам.“</li>
+      </ul>
+    </div>
+
+    <p class="center" style="max-width:640px !important; margin:28px auto 0 !important; font-size:1.15rem !important; color:var(--navy) !important; font-style:italic !important;">
+      И когато започнеш да чуваш това скрито послание, детето вече не е само в своя симптом —
+      а ти вече не си сама в своята безпомощност. Точно там започва истинската промяна.
+    </p>
+  </section>
+
   <!-- ===== THE BOOK: FROM / HELPS ===== -->
   <section class="sec-sage">
     <div class="wrap center">
@@ -394,13 +489,6 @@
         Нежен пътеводител за майки, които искат не просто да усмирят поведението,
         а да разберат сърцето зад него.
       </p>
-    </div>
-    <div class="wrap" style="margin-top:30px !important;">
-      <div class="keypoint">
-        <span class="kp-icon">🪞</span>
-        <p>Система Огледало</p>
-        <div class="kp-sub">Разбери как тревожността, агресията, страховете и психосоматичните симптоми при децата често са свързани със семейната система — и започват да отшумяват, когато тя се промени.</div>
-      </div>
     </div>
     <div class="wrap outcome-grid">
       <div class="oc-card">
@@ -445,7 +533,7 @@
       <div class="eyebrow">Какво ще постигнеш</div>
       <h2>Стъпка по стъпка — към по-спокоен дом</h2>
       <p style="max-width:680px !important; margin:14px auto 0 !important; color:var(--muted) !important;">
-        Чрез Система Огледало книгата те води нежно от объркването към яснотата:
+        Чрез Система Огледало™ книгата те води нежно от объркването към яснотата:
       </p>
     </div>
     <div class="achieve">
