@@ -160,6 +160,24 @@
   .review .who { font-family: "Helvetica Neue", Arial, sans-serif !important; font-weight: 700 !important; font-size: 0.92rem !important; color: var(--navy) !important; font-style: normal !important; }
   .review .who span { display: block !important; font-weight: 500 !important; color: var(--muted) !important; font-size: 0.82rem !important; }
 
+  /* Viber-style chat testimonials */
+  .chat-window { max-width: 560px !important; margin: 34px auto 0 !important; border-radius: 20px !important; overflow: hidden !important; box-shadow: 0 18px 40px rgba(43,58,99,0.16) !important; border: 1px solid var(--line) !important; background: #fff !important; }
+  .chat-head { background: linear-gradient(135deg, #8a78ff 0%, #6a5acd 100%) !important; color: #fff !important; padding: 13px 16px !important; display: flex !important; align-items: center !important; gap: 12px !important; font-family: "Helvetica Neue", Arial, sans-serif !important; }
+  .chat-head .ch-ava { width: 40px !important; height: 40px !important; border-radius: 50% !important; background: rgba(255,255,255,0.22) !important; display: flex !important; align-items: center !important; justify-content: center !important; font-size: 1.2rem !important; flex: 0 0 auto !important; }
+  .chat-head .ch-name { font-weight: 800 !important; font-size: 1rem !important; line-height: 1.1 !important; }
+  .chat-head .ch-sub { font-size: 0.74rem !important; opacity: 0.88 !important; margin-top: 2px !important; }
+  .chat-head .ch-icons { margin-left: auto !important; opacity: 0.9 !important; font-size: 1.05rem !important; letter-spacing: 4px !important; }
+  .chat-body { background: #ece6f2 !important; padding: 20px 14px 8px !important; }
+  .vmsg { display: flex !important; gap: 10px !important; margin-bottom: 16px !important; align-items: flex-end !important; }
+  .vavatar { flex: 0 0 auto !important; width: 36px !important; height: 36px !important; border-radius: 50% !important; color: #fff !important; font-weight: 800 !important; display: flex !important; align-items: center !important; justify-content: center !important; font-family: "Helvetica Neue", Arial, sans-serif !important; font-size: 0.95rem !important; }
+  .vbubble { background: #fff !important; border-radius: 4px 16px 16px 16px !important; padding: 10px 14px !important; box-shadow: 0 1px 2px rgba(0,0,0,0.14) !important; max-width: 82% !important; }
+  .vname { font-family: "Helvetica Neue", Arial, sans-serif !important; font-weight: 800 !important; font-size: 0.82rem !important; margin-bottom: 3px !important; }
+  .vstars { color: var(--gold) !important; font-size: 0.8rem !important; letter-spacing: 1px !important; margin-bottom: 4px !important; }
+  .vtext { font-size: 1rem !important; color: var(--ink) !important; line-height: 1.5 !important; font-family: "Georgia", serif !important; }
+  .vmeta { font-family: "Helvetica Neue", Arial, sans-serif !important; font-size: 0.72rem !important; color: var(--muted) !important; margin-top: 6px !important; text-align: right !important; }
+  .vcheck { color: #6a5acd !important; font-weight: 700 !important; }
+  @media (max-width: 760px) { .vbubble { max-width: 84% !important; } }
+
   /* Guarantee */
   .guarantee-box { background: #fff !important; border: 2px dashed var(--sage) !important; border-radius: 18px !important; padding: 38px 30px !important; text-align: center !important; max-width: 720px !important; margin: 0 auto !important; }
   .guarantee-box .seal { font-family: "Helvetica Neue", Arial, sans-serif !important; font-weight: 800 !important; color: #fff !important; background: var(--sage) !important; display: inline-block !important; padding: 10px 22px !important; border-radius: 50px !important; letter-spacing: 1px !important; margin-bottom: 18px !important; font-size: 0.95rem !important; }
@@ -599,13 +617,73 @@
       <div class="eyebrow">Какво казват майките</div>
       <h2>Над 1 200 семейства вече дишат по-леко</h2>
     </div>
-    <div class="wrap reviews">
-      <div class="review"><span class="stars">★★★★★</span><p>„Четях с буца в гърлото — сякаш някой описа моя дом. За две седмици разговорите със сина ми се промениха коренно.“</p><div class="who">Десислава, 41 г.<span>майка на момче, 14 г.</span></div></div>
-      <div class="review"><span class="stars">★★★★★</span><p>„Мислех, че дъщеря ми е просто „трудно дете“. Книгата ми показа колко много от напрежението идва от нас. Облекчение е.“</p><div class="who">Мария, 37 г.<span>майка на момиче, 9 г.</span></div></div>
-      <div class="review"><span class="stars">★★★★★</span><p>„Агресията на сина ми ме плашеше. Тук намерих не критика, а разбиране и ясни стъпки. Вкъщи вече е по-спокойно.“</p><div class="who">Радостина, 44 г.<span>майка на момче, 7 г.</span></div></div>
-      <div class="review"><span class="stars">★★★★★</span><p>„Написана е човешки, без сложни думи. Прочетох я за два дни и подчертах половината. Препоръчах я веднага.“</p><div class="who">Ивелина, 39 г.<span>майка на две деца</span></div></div>
-      <div class="review"><span class="stars">★★★★★</span><p>„Тийнейджърката ми се беше затворила напълно. Не очаквах книга да помогне, но упражненията отвориха разговор между нас.“</p><div class="who">Галя, 46 г.<span>майка на момиче, 16 г.</span></div></div>
-      <div class="review"><span class="stars">★★★★★</span><p>„Най-полезната книга за родители, която съм чела. Не дава вина, а посока. Усещам, че най-после разбирам детето си.“</p><div class="who">Николета, 35 г.<span>майка на момче, 5 г.</span></div></div>
+    <div class="wrap">
+      <div class="chat-window">
+        <div class="chat-head">
+          <div class="ch-ava">💜</div>
+          <div>
+            <div class="ch-name">Майки за книгата</div>
+            <div class="ch-sub">1 200+ участнички · онлайн</div>
+          </div>
+          <div class="ch-icons">📞&nbsp;📹</div>
+        </div>
+        <div class="chat-body">
+          <div class="vmsg">
+            <div class="vavatar" style="background:#d4795c !important;">Д</div>
+            <div class="vbubble">
+              <div class="vname" style="color:#bd6447 !important;">Десислава</div>
+              <div class="vstars">★★★★★</div>
+              <div class="vtext">Четях с буца в гърлото — сякаш някой описа моя дом. За две седмици разговорите със сина ми се промениха коренно. 🙏</div>
+              <div class="vmeta">майка на момче, 14 г. · 9:41 <span class="vcheck">✓✓</span></div>
+            </div>
+          </div>
+          <div class="vmsg">
+            <div class="vavatar" style="background:#8ea896 !important;">М</div>
+            <div class="vbubble">
+              <div class="vname" style="color:#6f8a77 !important;">Мария</div>
+              <div class="vstars">★★★★★</div>
+              <div class="vtext">Мислех, че дъщеря ми е просто „трудно дете“. Книгата ми показа колко много от напрежението идва от нас. Облекчение е. ❤️</div>
+              <div class="vmeta">майка на момиче, 9 г. · 10:12 <span class="vcheck">✓✓</span></div>
+            </div>
+          </div>
+          <div class="vmsg">
+            <div class="vavatar" style="background:#6a5acd !important;">Р</div>
+            <div class="vbubble">
+              <div class="vname" style="color:#5a4cb0 !important;">Радостина</div>
+              <div class="vstars">★★★★★</div>
+              <div class="vtext">Агресията на сина ми ме плашеше. Тук намерих не критика, а разбиране и ясни стъпки. Вкъщи вече е по-спокойно.</div>
+              <div class="vmeta">майка на момче, 7 г. · вчера <span class="vcheck">✓✓</span></div>
+            </div>
+          </div>
+          <div class="vmsg">
+            <div class="vavatar" style="background:#cf9b46 !important;">И</div>
+            <div class="vbubble">
+              <div class="vname" style="color:#b07f2e !important;">Ивелина</div>
+              <div class="vstars">★★★★★</div>
+              <div class="vtext">Написана е човешки, без сложни думи. Прочетох я за два дни и подчертах половината. Препоръчах я веднага! 📖</div>
+              <div class="vmeta">майка на две деца · 08:27 <span class="vcheck">✓✓</span></div>
+            </div>
+          </div>
+          <div class="vmsg">
+            <div class="vavatar" style="background:#2b3a63 !important;">Г</div>
+            <div class="vbubble">
+              <div class="vname" style="color:#2b3a63 !important;">Галя</div>
+              <div class="vstars">★★★★★</div>
+              <div class="vtext">Тийнейджърката ми се беше затворила напълно. Не очаквах книга да помогне, но упражненията отвориха разговор между нас. 🥹</div>
+              <div class="vmeta">майка на момиче, 16 г. · 11:50 <span class="vcheck">✓✓</span></div>
+            </div>
+          </div>
+          <div class="vmsg">
+            <div class="vavatar" style="background:#c0698f !important;">Н</div>
+            <div class="vbubble">
+              <div class="vname" style="color:#a8547a !important;">Николета</div>
+              <div class="vstars">★★★★★</div>
+              <div class="vtext">Най-полезната книга за родители, която съм чела. Не дава вина, а посока. Усещам, че най-после разбирам детето си. 💛</div>
+              <div class="vmeta">майка на момче, 5 г. · вчера <span class="vcheck">✓✓</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
