@@ -329,6 +329,58 @@
   .sticky-cta .sc-old { font-size: 0.85rem !important; color: var(--muted) !important; text-decoration: line-through !important; }
   .sticky-cta .btn { flex: 1 1 auto !important; padding: 14px 18px !important; font-size: 1rem !important; box-shadow: none !important; }
 
+  /* ===== EMOTIONAL LETTER ===== */
+  .letter { max-width: 720px !important; margin: 0 auto !important; }
+  .letter p { font-size: 1.15rem !important; line-height: 1.75 !important; color: var(--ink) !important; }
+  .letter .big { font-size: 1.35rem !important; font-weight: 700 !important; color: var(--navy) !important; font-family: "Georgia", serif !important; }
+  .letter .sign { font-style: italic !important; color: var(--muted) !important; margin-top: 18px !important; }
+
+  /* ===== TRUTH / REFRAME ===== */
+  .truth h2 { color: #fff !important; }
+  .truth .lead { font-size: 1.2rem !important; }
+  .truth-points { list-style: none !important; margin-top: 28px !important; max-width: 760px !important; margin-left: auto !important; margin-right: auto !important; }
+  .truth-points li {
+    background: rgba(255,255,255,0.07) !important;
+    border-left: 4px solid var(--gold) !important;
+    border-radius: 10px !important;
+    padding: 18px 22px !important;
+    margin-bottom: 14px !important;
+    font-size: 1.05rem !important;
+    color: #f1ece4 !important;
+  }
+  .truth-points li strong { color: #fff !important; }
+  .truth .quote {
+    font-family: "Georgia", serif !important;
+    font-style: italic !important;
+    font-size: 1.3rem !important;
+    text-align: center !important;
+    color: var(--gold) !important;
+    max-width: 640px !important;
+    margin: 34px auto 0 !important;
+    line-height: 1.5 !important;
+  }
+  .truth .quote-by { display: block !important; font-size: 0.85rem !important; font-style: normal !important; letter-spacing: 1px !important; text-transform: uppercase !important; color: #b9c2d6 !important; margin-top: 12px !important; font-family: "Helvetica Neue", Arial, sans-serif !important; }
+
+  /* ===== WHAT'S INSIDE ===== */
+  .learn-list { list-style: none !important; max-width: 760px !important; margin: 30px auto 0 !important; }
+  .learn-list li {
+    background: #fff !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 12px !important;
+    padding: 16px 18px 16px 52px !important;
+    margin-bottom: 12px !important;
+    position: relative !important;
+    font-size: 1.05rem !important;
+  }
+  .learn-list li::before {
+    content: "✓" !important;
+    position: absolute !important; left: 16px !important; top: 50% !important; transform: translateY(-50%) !important;
+    width: 26px !important; height: 26px !important; border-radius: 50% !important;
+    background: var(--sage) !important; color: #fff !important;
+    display: flex !important; align-items: center !important; justify-content: center !important;
+    font-weight: 800 !important; font-size: 0.9rem !important;
+  }
+
   /* Footer */
   footer { background: var(--navy-dark) !important; color: #c8cfdf !important; padding: 40px 0 !important; font-family: "Helvetica Neue", Arial, sans-serif !important; font-size: 0.9rem !important; text-align: center !important; }
   footer a { color: #fff !important; text-decoration: underline !important; margin: 0 10px !important; display: inline-block !important; }
@@ -393,6 +445,34 @@
     </div>
   </header>
 
+  <!-- ===== EMOTIONAL LETTER ===== -->
+  <section class="sec-cream2">
+    <div class="wrap letter">
+      <div class="eyebrow center">Писмо до теб, мамо</div>
+      <p>
+        Спомняш ли си последния път, когато детето ти избухна — и за миг,
+        зад гнева в очите му, видя нещо друго? Болка, която то самото не разбира
+        и не може да назове.
+      </p>
+      <p>
+        Опитала си всичко. Говорила си спокойно и си повишавала тон. Прегръщала си,
+        наказвала си, награждавала си, преговаряла си. А вечер, когато къщата най-после
+        утихне, някъде дълбоко в теб тихо прошепва един въпрос:
+        <em>„Аз ли греша нещо?“</em>
+      </p>
+      <p class="big">
+        Искам да го чуеш ясно: не си лоша майка. И това, което се случва с детето ти,
+        не започва с теб.
+      </p>
+      <p>
+        Има причина зад поведението — причина, която рядко е там, където я търсим.
+        И когато най-после я видиш, всичко се променя. Не защото си се борила повече,
+        а защото най-после си разбрала.
+      </p>
+      <p class="sign">— Дори Симитчиева</p>
+    </div>
+  </section>
+
   <!-- ===== PROBLEM ===== -->
   <section>
     <div class="wrap hero-grid">
@@ -422,6 +502,49 @@
           Истината, която малко хора казват: поведението на детето често не е проблемът — то е симптом.
         </p>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUTH / REFRAME ===== -->
+  <section class="final truth">
+    <div class="wrap center">
+      <div class="eyebrow">Истината, която променя всичко</div>
+      <h2>Детето не е проблемът. То е посланието.</h2>
+      <p class="lead" style="max-width:720px !important; margin:0 auto !important;">
+        Децата усещат много повече, отколкото могат да изкажат с думи. Когато нещо в
+        семейството е под напрежение, детето го носи първо — в тялото, в съня, в поведението си.
+      </p>
+      <ul class="truth-points">
+        <li>
+          <strong>Симптомът е акт на любов, не каприз.</strong> От дълбока лоялност детето
+          несъзнавано поема товар, който не е негов. Тревожността, агресията, затварянето —
+          това е езикът, с който то казва онова, което никой в семейството не е изрекъл на глас.
+        </li>
+        <li>
+          <strong>Любовта в семейството има посока.</strong> Родителите дават, децата получават.
+          Когато детето започне да „носи“ вместо родителя — стара болка, вина, непреживяна загуба —
+          тази посока се обръща. И тогава се появяват симптомите.
+        </li>
+        <li>
+          <strong>Всичко, което е изключено, се връща.</strong> Премълчаните истории, забравените
+          или отхвърлени членове на рода не изчезват. Често именно детето несъзнавано ги
+          „представя“ — за да им върне мястото в семейството.
+        </li>
+        <li>
+          <strong>Не започва с теб.</strong> Днес науката го потвърждава: тревожността и травмата
+          могат да се предават през поколения (епигенетика, изследванията на Рейчъл Йехуда,
+          „Тялото помни всичко“ на Бесел ван дер Колк). Това, което детето носи, често е тръгнало
+          много преди него — и много преди теб.
+        </li>
+      </ul>
+      <p class="quote">
+        „Детето би предпочело да носи товара, отколкото да остави родителя си да страда сам.“
+        <span class="quote-by">по идеите на Берт Хелингер · семейни констелации</span>
+      </p>
+      <p style="max-width:680px !important; margin:30px auto 0 !important; font-size:1.15rem !important;">
+        Добрата новина? Не е нужно да „поправяш“ детето си. Когато разбереш скритата динамика и
+        заемеш отново своето място, детето може да върне товара, който не е негово — и да се освободи.
+      </p>
     </div>
   </section>
 
@@ -457,8 +580,30 @@
     </div>
   </section>
 
-  <!-- ===== 3 BENEFITS ===== -->
+  <!-- ===== WHAT'S INSIDE ===== -->
   <section>
+    <div class="wrap center">
+      <div class="eyebrow">Какво ще откриеш вътре</div>
+      <h2>Поглед, който ще промени начина, по който виждаш детето си</h2>
+    </div>
+    <ul class="learn-list">
+      <li>Защо поведението на детето е послание, а не проблем — и как да го разчетеш.</li>
+      <li>Кой скрит товар детето носи вместо теб или вместо рода ви.</li>
+      <li>Законите на любовта в семейството — кой дава, кой получава — и как да ги възстановиш.</li>
+      <li>Как премълчаните истории и загуби в рода влияят на детето ти днес.</li>
+      <li>Прости упражнения от семейните констелации, които можеш да правиш у дома.</li>
+      <li>Как да заемеш своето място като родител — спокойно и уверено, без вина.</li>
+      <li>Как да върнеш близостта, доверието и спокойствието между вас.</li>
+    </ul>
+    <div class="center" style="margin-top:30px !important;">
+      <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">
+        Искам да разбера детето си →
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== 3 BENEFITS ===== -->
+  <section class="sec-cream2">
     <div class="wrap center">
       <div class="eyebrow">Защо точно тази книга</div>
       <h2>Три неща, които ще се променят за теб</h2>
@@ -498,7 +643,7 @@
   </section>
 
   <!-- ===== SOCIAL PROOF ===== -->
-  <section class="sec-cream2">
+  <section>
     <div class="wrap center">
       <div class="eyebrow">Какво казват майките</div>
       <h2>Над 1 200 семейства вече дишат по-леко</h2>
@@ -647,6 +792,16 @@
       <details>
         <summary>За каква възраст на детето е подходяща книгата?</summary>
         <div class="faq-body">Книгата е за майки на деца от 3 до 18 години. Принципите за семейната система важат както за малки деца с избухвания, така и за затворени тийнейджъри — примерите покриват целия диапазон.</div>
+      </details>
+
+      <details>
+        <summary>Трябва ли да вярвам в семейните констелации, за да ми помогне?</summary>
+        <div class="faq-body">Не. Книгата не иска вяра — иска само отворен поглед. Идеите са обяснени просто и човешки, подкрепени и от съвременната наука за наследената травма. Дори да четеш със скептицизъм, ще разпознаеш динамики от собствения си дом.</div>
+      </details>
+
+      <details>
+        <summary>Това замества ли психолог или терапия?</summary>
+        <div class="faq-body">Не. Книгата е пътеводител за разбиране, който ти дава нов поглед и конкретни стъпки у дома. Тя чудесно допълва работата с специалист, но при сериозни състояния винаги потърси и професионална подкрепа.</div>
       </details>
 
       <details>
