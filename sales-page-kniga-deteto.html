@@ -178,6 +178,11 @@
   .vcheck { color: #6a5acd !important; font-weight: 700 !important; }
   @media (max-width: 760px) { .vbubble { max-width: 84% !important; } }
 
+  /* Real testimonial screenshots */
+  .proof-grid { display: flex !important; gap: 22px !important; flex-wrap: wrap !important; justify-content: center !important; align-items: flex-start !important; margin-top: 36px !important; }
+  .proof-card { flex: 1 1 300px !important; max-width: 360px !important; background: #fff !important; border: 1px solid var(--line) !important; border-radius: 16px !important; padding: 10px !important; box-shadow: 0 10px 26px rgba(43,58,99,0.10) !important; }
+  .proof-card img { width: 100% !important; height: auto !important; border-radius: 10px !important; display: block !important; }
+
   /* Guarantee */
   .guarantee-box { background: #fff !important; border: 2px dashed var(--sage) !important; border-radius: 18px !important; padding: 38px 30px !important; text-align: center !important; max-width: 720px !important; margin: 0 auto !important; }
   .guarantee-box .seal { font-family: "Helvetica Neue", Arial, sans-serif !important; font-weight: 800 !important; color: #fff !important; background: var(--sage) !important; display: inline-block !important; padding: 10px 22px !important; border-radius: 50px !important; letter-spacing: 1px !important; margin-bottom: 18px !important; font-size: 0.95rem !important; }
@@ -608,8 +613,25 @@
     <p class="sci-note">Книгата взема това разбиране и го превръща в прости стъпки за вкъщи — за да знаеш не само „защо“, но и „какво да направиш“.</p>
   </section>
 
-  <!-- ===== 13. GUARANTEE ===== -->
+  <!-- ===== 12. REAL TESTIMONIALS ===== -->
   <section class="sec-cream2">
+    <div class="wrap center">
+      <div class="eyebrow">Реални отзиви</div>
+      <h2>Зад книгата стои реална промяна в реални хора</h2>
+    </div>
+    <!-- ============================================================= -->
+    <!--  РЕАЛНИ ОТЗИВИ — качи screenshot-ите в платформата с имена     -->
+    <!--  otziv-1.jpg, otziv-2.jpg, otziv-3.jpg (или смени src).        -->
+    <!-- ============================================================= -->
+    <div class="wrap proof-grid">
+      <div class="proof-card"><img src="otziv-1.jpg" alt="Реален отзив — Нели Разпопова" /></div>
+      <div class="proof-card"><img src="otziv-2.jpg" alt="Реален отзив — Mariana Dimitrova" /></div>
+      <div class="proof-card"><img src="otziv-3.jpg" alt="Реален отзив — Рая" /></div>
+    </div>
+  </section>
+
+  <!-- ===== 13. GUARANTEE ===== -->
+  <section>
     <div class="wrap">
       <div class="guarantee-box">
         <div class="seal">🛡️ 90-ДНЕВНА ГАРАНЦИЯ „ВИЖ ПРОМЯНАТА“</div>
