@@ -277,7 +277,7 @@
 
   <!-- ===== URGENCY BAR ===== -->
   <div class="topbar">
-    ✨ По-спокойно, уверено и щастливо дете с книгата „Това, което детето ти не може да каже“. Остават само <b><span class="stock-count">67</span> броя</b> на намалена цена · 90-дневна гаранция.
+    ✨ По-спокойно, уверено и щастливо дете с книгата „Това, което детето ти не може да каже“. Остават само <b><span class="stock-count">47</span> броя</b> на намалена цена · 90-дневна гаранция.
   </div>
 
   <!-- ===== 1. HERO / HOOK ===== -->
@@ -434,7 +434,7 @@
     </div>
     <div class="wrap">
       <div class="stock-bar">
-        <div class="sb-text">🔥 Остават само <span class="stock-count">67</span> бройки на тази цена</div>
+        <div class="sb-text">🔥 Остават само <span class="stock-count">47</span> бройки на тази цена</div>
         <div class="stock-track"><div class="stock-fill"></div></div>
       </div>
       <div class="bonus-grid">
@@ -679,7 +679,7 @@
         </div>
       </div>
       <p style="font-size:1.02rem !important; color:#c8cfdf !important;">
-        Остават само <b style="color:var(--gold) !important;"><span class="stock-count">67</span> броя</b> на цена
+        Остават само <b style="color:var(--gold) !important;"><span class="stock-count">47</span> броя</b> на цена
         <b>15,90 € / 31,10 лв</b> вместо 24,90 € — с 3 бонуса (вкл. 90-дневна гаранция).
       </p>
       <a class="btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a">Поръчай книгата за 15,90 € →</a>
@@ -724,30 +724,34 @@
     })();
   </script>
 
-  <!-- ===== STOCK COUNTER (отброява от 67 надолу) ===== -->
+  <!-- ===== STOCK COUNTER (отброява от 47 надолу) ===== -->
   <script>
     (function () {
-      var SKEY = "deteto_stock";
-      var START = 67;     // начален брой
-      var FLOOR = 8;      // не пада под това число
-      var STEP_MS = 6 * 60 * 1000; // спада с 1 на всеки ~6 минути (натрупване между посещения)
+      var SKEY = "deteto_stock_v2";   // нов ключ → тръгва чисто от 47
+      var START = 47;                 // начален брой
+      var FLOOR = 9;                  // не пада под това число
+      var STEP_MS = 6 * 60 * 1000;    // спада с 1 на всеки ~6 минути между посещения
+      var RESET_MS = 12 * 60 * 60 * 1000; // нулира се обратно на 47 на всеки 12 часа
       var now = Date.now();
       var data;
       try { data = JSON.parse(localStorage.getItem(SKEY)); } catch (e) { data = null; }
-      if (!data || typeof data.n !== "number") { data = { n: START, t: now }; }
-      var dropped = Math.floor((now - data.t) / STEP_MS);
-      if (dropped > 0) { data.n = Math.max(FLOOR, data.n - dropped); data.t = now; }
+      if (!data || typeof data.n !== "number" || !data.born || (now - data.born) > RESET_MS) {
+        data = { n: START, t: now, born: now };
+      } else {
+        var dropped = Math.floor((now - data.t) / STEP_MS);
+        if (dropped > 0) { data.n = Math.max(FLOOR, data.n - dropped); data.t = now; }
+      }
       localStorage.setItem(SKEY, JSON.stringify(data));
       function render() {
         var els = document.querySelectorAll(".stock-count");
         for (var i = 0; i < els.length; i++) els[i].textContent = data.n;
         var fills = document.querySelectorAll(".stock-fill");
-        var pct = Math.max(6, Math.round((data.n / START) * 100));
+        var pct = Math.max(8, Math.round((data.n / START) * 100));
         for (var j = 0; j < fills.length; j++) fills[j].style.width = pct + "%";
       }
       render();
       function scheduleTick() {
-        var delay = (18 + Math.random() * 27) * 1000; // намалява с 1 на всеки ~18–45 сек на живо
+        var delay = (30 + Math.random() * 50) * 1000; // намалява с 1 на всеки ~30–80 сек на живо
         setTimeout(function () {
           if (data.n > FLOOR) {
             data.n -= 1; data.t = Date.now();
@@ -760,7 +764,7 @@
       setTimeout(function () {
         if (data.n > FLOOR) { data.n -= 1; data.t = Date.now(); localStorage.setItem(SKEY, JSON.stringify(data)); render(); }
         scheduleTick();
-      }, 8000); // първо намаление след ~8 сек, за да се види веднага
+      }, 12000); // първо намаление след ~12 сек
     })();
   </script>
 
