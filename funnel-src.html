@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="bg"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Това, което детето ти не може да каже</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Helvetica Neue",Arial,sans-serif;color:#2b3550;line-height:1.6;background:#faf5ee}
+.dt-w{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{color:#2b3a63;line-height:1.2;font-weight:800}
+p{margin-bottom:1rem}
+.dt-bar{background:#2b3a63;color:#fff;text-align:center;font-size:.92rem;font-weight:600;padding:11px 16px}
+.dt-bar b{color:#cf9b46}
+.dt-eye{text-transform:uppercase;letter-spacing:2px;font-size:.76rem;font-weight:700;color:#d4795c;margin-bottom:12px}
+.dt-btn{display:inline-block;background:#d4795c;color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;padding:19px 38px;border-radius:60px;text-align:center;box-shadow:0 12px 28px rgba(212,121,92,.35)}
+.dt-btn:hover{background:#bd6447}
+.dt-sub{display:block;font-size:.8rem;font-weight:600;color:#6a6f7d;margin-top:11px}
+.dt-sec{padding:54px 0}
+.dt-cream{background:#f2e9db}
+.dt-sage{background:#eef2ec}
+.dt-c{text-align:center}
+.dt-hero{background:linear-gradient(180deg,#faf5ee,#f2e9db);padding:44px 0 52px}
+.dt-hg{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.dt-col{flex:1 1 340px}
+.dt-hero h1{font-size:2.1rem;letter-spacing:-.5px;margin-bottom:16px}
+.dt-lead{font-size:1.15rem;color:#6a6f7d;margin-bottom:20px}
+.dt-ben{list-style:none;margin:0 0 22px}
+.dt-ben li{padding:8px 0 8px 32px;position:relative;font-size:1.05rem}
+.dt-ben li::before{content:"✓";position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:50%;background:#8ea896;color:#fff;font-size:.78rem;font-weight:800;display:flex;align-items:center;justify-content:center}
+.dt-cover{width:100%;max-width:360px;margin:0 auto;display:block;border-radius:6px;filter:drop-shadow(0 26px 40px rgba(43,58,99,.28))}
+.dt-life{width:100%;max-width:560px;margin:26px auto 0;display:block;border-radius:16px;box-shadow:0 20px 40px rgba(43,58,99,.18)}
+.dt-oc{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px}
+.dt-ocb{flex:1 1 300px;background:#fff;border:1px solid #e8ddca;border-radius:16px;padding:26px;box-shadow:0 8px 20px rgba(43,58,99,.05);text-align:left}
+.dt-ocb h3{margin-bottom:14px;font-size:1.1rem}
+.dt-ocl{list-style:none}
+.dt-ocl li{padding:8px 0 8px 28px;position:relative}
+.dt-bad li::before{content:"✕";position:absolute;left:0;color:#d4795c;font-weight:800}
+.dt-good li::before{content:"✓";position:absolute;left:0;color:#8ea896;font-weight:800}
+.dt-shift{display:flex;gap:14px;flex-wrap:wrap;max-width:720px;margin:24px auto 0}
+.dt-sh{flex:1 1 240px;border-radius:14px;padding:20px;text-align:center}
+.dt-from{background:#fff;border:1px solid #e8ddca;color:#6a6f7d;font-style:italic}
+.dt-to{background:#2b3a63;color:#fff;font-style:italic}
+.dt-lab{font-size:.7rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:800;margin-bottom:8px;font-style:normal;display:block}
+.dt-from .dt-lab{color:#d4795c}.dt-to .dt-lab{color:#cf9b46}
+.dt-ach{max-width:800px;margin:30px auto 0;text-align:left}
+.dt-ai{display:flex;gap:18px;background:#fff;border:1px solid #e8ddca;border-radius:16px;padding:24px;margin-bottom:16px;box-shadow:0 8px 20px rgba(43,58,99,.05)}
+.dt-ain{flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:#2b3a63;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.dt-aib h3{margin-bottom:8px}
+.dt-as{list-style:none}
+.dt-as li{padding:5px 0 5px 24px;position:relative;color:#6a6f7d;font-size:1rem}
+.dt-as li::before{content:"→";position:absolute;left:0;color:#d4795c;font-weight:700}
+.dt-wh{max-width:680px;margin:30px auto 0;background:#fff;border:1px solid #e8ddca;border-left:5px solid #d4795c;border-radius:14px;padding:24px 28px;text-align:left}
+.dt-wh .l{font-weight:700;color:#2b3a63;margin-bottom:12px}
+.dt-wh ul{list-style:none}
+.dt-wh li{font-style:italic;color:#2b3a63;font-size:1.08rem;padding:6px 0}
+.dt-key{background:#fff;border:2px solid #8ea896;border-radius:18px;max-width:820px;margin:0 auto;padding:30px;text-align:center;box-shadow:0 14px 34px rgba(43,58,99,.08)}
+.dt-key p{font-size:1.3rem;font-weight:700;color:#2b3a63;margin-bottom:10px}
+.dt-key .s{font-size:1rem;font-weight:500;color:#6a6f7d;margin:0}
+.dt-card{background:#fff;border-radius:20px;border:1px solid #e8ddca;box-shadow:0 22px 46px rgba(43,58,99,.12);padding:34px 28px;max-width:560px;margin:0 auto;text-align:center}
+.dt-old{color:#6a6f7d;text-decoration:line-through;font-size:1.25rem}
+.dt-now{font-weight:800;font-size:3rem;color:#d4795c;line-height:1;margin:4px 0}
+.dt-lev{color:#6a6f7d;font-size:.95rem;margin-bottom:6px}
+.dt-pill{display:inline-block;background:#cf9b46;color:#4a3300;font-weight:800;font-size:.8rem;padding:6px 14px;border-radius:50px;margin-bottom:14px}
+.dt-inc{list-style:none;text-align:left;max-width:380px;margin:20px auto 0}
+.dt-inc li{padding:8px 0 8px 28px;position:relative;font-size:1rem}
+.dt-inc li::before{content:"✓";position:absolute;left:0;color:#8ea896;font-weight:800}
+.dt-card .dt-btn{display:block;margin-top:16px}
+.dt-bundle{background:linear-gradient(135deg,#fff,#faf5ee);border:2px solid #cf9b46;border-radius:20px;max-width:600px;margin:24px auto 0;padding:30px 26px;text-align:center}
+.dt-bundle .tg{display:inline-block;background:#d4795c;color:#fff;font-weight:800;font-size:.78rem;padding:7px 16px;border-radius:50px;margin-bottom:12px}
+.dt-bundle h3{margin-bottom:8px}
+.dt-bp{margin:12px 0}
+.dt-bp .o{color:#6a6f7d;text-decoration:line-through;font-size:1.1rem;margin-right:8px}
+.dt-bp .n{color:#2b3a63;font-size:1.8rem;font-weight:800}
+.dt-bundle .dt-btn{display:block;margin-top:14px;background:#8ea896;box-shadow:0 12px 28px rgba(142,168,150,.4)}
+.dt-bundle .dt-btn:hover{background:#7a957f}
+.dt-cd{text-align:center;margin:0 auto 26px}
+.dt-cdl{text-transform:uppercase;letter-spacing:1.5px;font-size:.8rem;font-weight:700;color:#d4795c;margin-bottom:10px}
+.dt-cd-r{display:inline-flex;gap:10px}
+.dt-box{background:#2b3a63;color:#fff;border-radius:12px;min-width:68px;padding:11px 8px}
+.dt-num{font-size:1.8rem;font-weight:800;line-height:1;display:block}
+.dt-unit{font-size:.66rem;text-transform:uppercase;letter-spacing:1px;opacity:.8;margin-top:5px;display:block}
+.dt-age{background:#fff;border:1px solid #e8ddca;border-radius:16px;padding:24px 26px;margin-bottom:16px;max-width:800px;margin-left:auto;margin-right:auto;text-align:left;box-shadow:0 8px 20px rgba(43,58,99,.05)}
+.dt-tag{display:inline-block;background:#eef2ec;color:#2b3a63;font-weight:800;font-size:.82rem;padding:7px 15px;border-radius:50px;margin-bottom:12px}
+.dt-x{list-style:none;margin-bottom:12px}
+.dt-x li{padding:5px 0 5px 26px;position:relative;color:#6a6f7d}
+.dt-x li::before{content:"✕";position:absolute;left:0;color:#d4795c;font-weight:800}
+.dt-fix{font-style:italic;color:#2b3a63;margin:0}
+.dt-loss{list-style:none;max-width:760px;margin:22px auto 0;text-align:left}
+.dt-loss li{background:rgba(255,255,255,.08);border-left:4px solid #d4795c;border-radius:10px;padding:13px 18px;margin-bottom:12px;color:#f1ece4}
+.dt-sci{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px}
+.dt-scc{flex:1 1 280px;background:#fff;border:1px solid #e8ddca;border-radius:16px;padding:26px;box-shadow:0 8px 20px rgba(43,58,99,.05);text-align:left}
+.dt-sct{text-transform:uppercase;letter-spacing:1px;font-size:.72rem;font-weight:800;color:#d4795c;margin-bottom:10px;display:block}
+.dt-scc h3{margin-bottom:8px}
+.dt-scc p{color:#6a6f7d;margin:0;font-size:1rem}
+.dt-rev{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;align-items:flex-start;margin:30px auto 0}
+.dt-rci{flex:1 1 280px;max-width:330px;background:#fff;border:1px solid #e8ddca;border-radius:14px;padding:8px;box-shadow:0 8px 20px rgba(43,58,99,.08)}
+.dt-rci img{width:100%;border-radius:9px;display:block}
+.dt-guar{background:#fff;border:2px dashed #8ea896;border-radius:18px;padding:34px 28px;text-align:center;max-width:700px;margin:0 auto}
+.dt-seal{display:inline-block;background:#8ea896;color:#fff;font-weight:800;padding:9px 20px;border-radius:50px;letter-spacing:.5px;margin-bottom:16px;font-size:.92rem}
+.dt-faq{max-width:760px;margin:24px auto 0;text-align:left}
+.dt-faq details{background:#fff;border:1px solid #e8ddca;border-radius:12px;margin-bottom:12px;padding:16px 20px}
+.dt-faq summary{cursor:pointer;font-weight:700;color:#2b3a63;list-style:none}
+.dt-faq summary::-webkit-details-marker{display:none}
+.dt-faq p{color:#6a6f7d;margin:10px 0 0}
+.dt-fin{background:#2b3a63;text-align:center}
+.dt-fin h2,.dt-fin p{color:#fff}
+.dt-tr{background:#2b3a63;text-align:center}
+.dt-tr h2,.dt-tr p{color:#fff}
+@media(max-width:760px){
+.dt-hero h1{font-size:1.7rem}.dt-now{font-size:2.5rem}
+.dt-btn{display:block;width:100%;padding:17px 22px}
+.dt-sec{padding:38px 0}.dt-cover{max-width:270px}.dt-ai{flex-direction:column;gap:10px}
+.dt-key p{font-size:1.12rem}
+}
+</style>
+</head>
+<body>
+
+<div class="dt-bar">✨ По-спокойно, уверено и щастливо дете с книгата „Това, което детето ти не може да каже“ · остават само <b><span class="dt-stock">47</span> броя</b> · 90-дневна гаранция</div>
+
+<div class="dt-hero">
+  <div class="dt-w dt-hg">
+    <div class="dt-col">
+      <div class="dt-eye">За майки на деца от 3 до 18 години</div>
+      <h1>Разбери какво ти казва детето ти зад изблиците, свитостта и агресията — и върни спокойствието вкъщи</h1>
+      <p class="dt-lead">Ако се чувстваш безсилна пред внезапните избухвания, затварянето в себе си или агресията на детето си — книгата „Това, което детето ти не може да каже“ ти показва какво наистина стои зад поведението.</p>
+      <p style="font-weight:700;color:#2b3a63;margin-bottom:10px">Ще се научиш да:</p>
+      <ul class="dt-ben">
+        <li>разчиташ какво крият изблиците, мълчанието и агресията</li>
+        <li>помагаш на детето си да се почувства спокойно, сигурно и разбрано</li>
+        <li>връщаш мира и близостта в семейството</li>
+      </ul>
+      <a class="dt-btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a" target="_top">Искам тази книга →</a>
+      <span class="dt-sub">🛡️ 90-дневна гаранция · Плащаш при доставка</span>
+    </div>
+    <div class="dt-col">
+      <img class="dt-cover" src="https://content.app-sources.com/s/105502761907659961/uploads/Изображения/ChatGPT_Image_30.06.2026_г._21_24_10-2843953.png" alt="Книга">
+    </div>
+  </div>
+</div>
+
+<div class="dt-sec">
+  <div class="dt-w dt-c">
+    <div class="dt-eye">Книгата</div>
+    <h2>„Това, което детето ти не може да каже“</h2>
+    <div class="dt-oc" style="text-align:left">
+      <div class="dt-ocb"><h3>Ще освободиш детето си от:</h3><ul class="dt-ocl dt-bad"><li>тревожността и страховете, които не може да обясни</li><li>избухванията и агресията, които плашат и него самото</li><li>затварянето и мълчанието, зад които се крие</li><li>тежестта да носи нещо, което не е негово</li></ul></div>
+      <div class="dt-ocb"><h3>И ще помогнеш на детето си отново да:</h3><ul class="dt-ocl dt-good"><li>е спокойно и уверено в себе си</li><li>изразява чувствата си с думи, а не с избухвания</li><li>се чувства сигурно, видяно и обичано</li><li>ти се доверява и споделя с теб</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<div class="dt-sec dt-sage">
+  <div class="dt-w dt-c">
+    <div class="dt-eye">Уникалният модел в книгата</div>
+    <h2>🪞 Система Огледало™</h2>
+    <p style="max-width:680px;margin:12px auto 0;color:#6a6f7d">Гледа на трудното поведение не като на проблем за потискане, а като на сигнал за разбиране. Сменя един въпрос — и това променя всичко:</p>
+    <div class="dt-shift">
+      <div class="dt-sh dt-from"><span class="dt-lab">От</span>„Какво му има на детето ми?“</div>
+      <div class="dt-sh dt-to"><span class="dt-lab">Към</span>„Какво се опитва да ми покаже това поведение?“</div>
+    </div>
+    <div class="dt-ach">
+      <div class="dt-ai"><div class="dt-ain">1</div><div class="dt-aib"><h3>Видимото поведение</h3><p style="color:#6a6f7d;margin:0">Това, което виждаш отвън — избухвания, плач, агресия, инат, тревожност, страхове, проблеми със съня или затваряне.</p></div></div>
+      <div class="dt-ai"><div class="dt-ain">2</div><div class="dt-aib"><h3>Скритото преживяване</h3><p style="color:#6a6f7d;margin:0">Какво стои под поведението — страх, несигурност, нужда от внимание, претоварване или вътрешен конфликт.</p></div></div>
+      <div class="dt-ai"><div class="dt-ain">3</div><div class="dt-aib"><h3>Семейното огледало</h3><p style="color:#6a6f7d;margin:0">Дали детето не отразява нещо по-голямо — напрежение между родителите, неизказана болка или натрупан стрес в дома.</p></div></div>
+    </div>
+    <div class="dt-wh"><p class="l">Зад трудното поведение често стои дете, което още не знае как да каже:</p><ul><li>„Страх ме е.“</li><li>„Не се чувствам сигурно.“</li><li>„Имам нужда да ме видиш.“</li><li>„Нещо в нашия дом ме напряга.“</li></ul></div>
+    <img class="dt-life" src="https://content.app-sources.com/s/105502761907659961/uploads/Изображения/ChatGPT_Image_30.06.2026_г._21_25_40-2843960.png" alt="Майка чете книгата">
+  </div>
+</div>
+
+<div class="dt-sec">
+  <div class="dt-w"><div class="dt-key"><p>🔑 Книгата се чете и прилага от теб — не от детето.</p><p class="s">Промяната тръгва от твоето място в семейството. Когато ти заемеш своето място, детето се освобождава да бъде дете.</p></div></div>
+</div>
+
+<div class="dt-sec dt-cream">
+  <div class="dt-w dt-c">
+    <div class="dt-eye">Какво ще постигнеш</div>
+    <h2>Стъпка по стъпка — към по-спокоен дом</h2>
+    <div class="dt-ach">
+      <div class="dt-ai"><div class="dt-ain">1</div><div class="dt-aib"><h3>Ще разчиташ истинското послание зад поведението</h3><ul class="dt-as"><li>ще разбираш какво всъщност казва детето, когато избухва или мълчи</li><li>ще виждаш причината, а не само симптома</li></ul></div></div>
+      <div class="dt-ai"><div class="dt-ain">2</div><div class="dt-aib"><h3>Ще свалиш напрежението и конфликтите у дома</h3><ul class="dt-as"><li>прости стъпки, които успокояват атмосферата още същата вечер</li><li>как да реагираш спокойно, вместо да влизаш в битка</li></ul></div></div>
+      <div class="dt-ai"><div class="dt-ain">3</div><div class="dt-aib"><h3>Ще върнеш близостта и доверието</h3><ul class="dt-as"><li>как детето отново да се отваря към теб</li><li>разговори, в които то се чувства чуто, а не съдено</li></ul></div></div>
+      <div class="dt-ai"><div class="dt-ain">4</div><div class="dt-aib"><h3>Ще намериш подход за всяка възраст</h3><ul class="dt-as"><li>3–6 г. — нежни начини да го успокоиш и разбереш</li><li>7–11 г. — как да върнеш увереността му</li><li>12–18 г. — как да стигнеш до затворения тийнейджър</li></ul></div></div>
+      <div class="dt-ai"><div class="dt-ain">5</div><div class="dt-aib"><h3>Ще си върнеш спокойствието като майка</h3><ul class="dt-as"><li>ще оставиш вината и безсилието зад гърба си</li><li>ще водиш семейството си от спокойствие, а не от страх</li></ul></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="dt-sec dt-cream">
+  <div class="dt-w dt-c">
+    <div class="dt-eye">Не получаваш само книга</div>
+    <h2>Към книгата — 3 подаръка на стойност над 89 €</h2>
+    <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:32px;text-align:left">
+      <div style="flex:1 1 280px;background:#fff;border-radius:16px;padding:26px;box-shadow:0 14px 30px rgba(43,58,99,.10)">
+        <div style="font-size:1.7rem;margin-bottom:8px">🎥</div>
+        <h3 style="font-size:1.1rem;margin-bottom:10px">Бонус 1: Видео-практика само за теб — „Взимам си всичко, което съм ти предала“</h3>
+        <p style="color:#6a6f7d;font-size:.96rem;margin-bottom:14px">Това видео не е за детето ти. То е за теб. Защото детето ти оглежда не думите ти — а това, което носиш несъзнавано от своя род. В тази водена констелационна практика те хващам за ръка да си върнеш това, което си предала, без да искаш — и да спреш веригата. 15 минути, които сменят посоката.</p>
+        <div style="font-weight:800;color:#2b3a63"><s style="color:#9aa3b0;font-weight:600">Стойност 49 €</s> → <span style="color:#d4795c">Безплатно</span></div>
+      </div>
+      <div style="flex:1 1 280px;background:#fff;border-radius:16px;padding:26px;box-shadow:0 14px 30px rgba(43,58,99,.10)">
+        <div style="font-size:1.7rem;margin-bottom:8px">🎟️</div>
+        <h3 style="font-size:1.1rem;margin-bottom:10px">Бонус 2: Лична онлайн консултация с мен — на специална цена</h3>
+        <p style="color:#6a6f7d;font-size:.96rem;margin-bottom:14px">Понякога имаш нужда някой да чуе точно твоя случай. Не общ съвет — а поглед само върху твоето дете и твоето семейство. С книгата получаваш ваучер за лична онлайн консултация с мен. Валиден 90 дни — използваш го, когато си готова.</p>
+        <div style="font-weight:800;color:#2b3a63"><s style="color:#9aa3b0;font-weight:600">120 €</s> → <span style="color:#d4795c">само 80 €</span></div>
+      </div>
+      <div style="flex:1 1 280px;background:#fff;border-radius:16px;padding:26px;box-shadow:0 14px 30px rgba(43,58,99,.10)">
+        <div style="font-size:1.7rem;margin-bottom:8px">🛡️</div>
+        <h3 style="font-size:1.1rem;margin-bottom:10px">Бонус 3: 90-дневна гаранция „Виж промяната“</h3>
+        <p style="color:#6a6f7d;font-size:.96rem;margin-bottom:14px">Прочети книгата. Приложи Система Огледало™ у дома. Ако в рамките на 90 дни не усетиш промяна — в начина, по който се чувствате с детето си, в спокойствието вкъщи, в това колко по-лесно се разбирате — пишеш ми и връщам парите за книгата. Без въпроси.</p>
+        <div style="font-weight:800;color:#2b3a63"><span style="color:#d4795c">Целият риск е мой</span></div>
+      </div>
+    </div>
+    <p style="font-size:.82rem;color:#9aa3b0;margin-top:18px">* Гаранцията важи за книгата. Личната консултация, веднъж проведена, не подлежи на връщане на сумата.</p>
+  </div>
+</div>
+
+<div class="dt-sec">
+  <div class="dt-w dt-c">
+    <div class="dt-eye">Твоята оферта днес</div>
+    <h2>Вземи книгата + 3-те подаръка</h2>
+    <div class="dt-cd" style="margin-top:26px">
+      <div class="dt-cdl">⏳ Офертата изтича до:</div>
+      <div class="dt-cd-r"><div class="dt-box"><span class="dt-num dt-h">00</span><span class="dt-unit">часа</span></div><div class="dt-box"><span class="dt-num dt-m">00</span><span class="dt-unit">мин</span></div><div class="dt-box"><span class="dt-num dt-s">00</span><span class="dt-unit">сек</span></div></div>
+    </div>
+    <div class="dt-card">
+      <span class="dt-pill">КНИГА + 3 ПОДАРЪКА · СТОЙНОСТ НАД 89 €</span>
+      <div class="dt-old">24,90 € / 48,70 лв</div>
+      <div class="dt-now">17,90 €</div>
+      <div class="dt-lev">35,01 лв</div>
+      <ul class="dt-inc"><li>Печатно издание „Това, което детето ти не може да каже“</li><li><b>Бонус 1:</b> Видео-практика „Взимам си всичко, което съм ти предала“</li><li><b>Бонус 2:</b> Ваучер за лична онлайн консултация (120 € → 80 €)</li><li><b>Бонус 3:</b> 90-дневна гаранция „Виж промяната“</li><li>Плащане с наложен платеж — плащаш при доставка</li></ul>
+      <a class="dt-btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a" target="_top">Поръчай за 17,90 € →</a>
+      <span class="dt-sub">🛡️ Без риск · 90-дневна гаранция за книгата</span>
+    </div>
+    <div class="dt-bundle">
+      <span class="tg">⭐ ПОДАРИ НА ПРИЯТЕЛКА · ВТОРАТА КНИГА –50%</span>
+      <h3>Вземи 2 книги — втората на половин цена</h3>
+      <p style="color:#6a6f7d;margin-bottom:0">Познаваш майка, на която ѝ е тежко точно сега? Поръчай две книги в една пратка — една за теб, една за нея.</p>
+      <div class="dt-bp"><span class="o">35,80 €</span><span class="n">26,85 € / 52,51 лв</span></div>
+      <p style="font-size:.92rem;color:#6a6f7d">Първа книга 17,90 € + втора само 8,95 € (–50%). Спестяваш още 8,95 €.</p>
+      <a class="dt-btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a" target="_top">Искам 2 книги за 26,85 € →</a>
+    </div>
+  </div>
+</div>
+
+<div class="dt-sec dt-cream">
+  <div class="dt-w dt-c">
+    <div class="dt-eye">За кого е тази книга</div>
+    <h2>Разпозна ли се?</h2>
+    <div style="margin-top:28px">
+      <div class="dt-age"><span class="dt-tag">👶 Дете на 3–6 години</span><ul class="dt-x"><li>Избухва, плаче и се вкопчва в теб, а ти не знаеш как да го успокоиш.</li><li>Усещаш, че нещо го тревожи, но то още няма думи да ти го каже.</li></ul><p class="dt-fix">👉 Ще откриеш нежни начини да усетиш какво стои зад сълзите.</p></div>
+      <div class="dt-age"><span class="dt-tag">👦 Дете на 7–11 години</span><ul class="dt-x"><li>Затваря се, отказва да споделя или избухва за дребни неща.</li><li>Започва да вярва, че „не е достатъчно добро“.</li></ul><p class="dt-fix">👉 Ще разбереш какъв товар носи — и как да му го свалиш.</p></div>
+      <div class="dt-age"><span class="dt-tag">👩‍🎓 Дете на 12–18 години</span><ul class="dt-x"><li>Чуваш все по-често „Остави ме!“ и усещаш как се отдалечава.</li><li>Имате чувството, че говорите на различни езици.</li></ul><p class="dt-fix">👉 Ще намериш пътя обратно към него — без натиск, през разбиране.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="dt-sec dt-tr">
+  <div class="dt-w" style="max-width:760px">
+    <div class="dt-eye" style="color:#d4795c">А ако нищо не се промени?</div>
+    <h2 style="color:#fff">Товарът, който не се вижда, не изчезва сам.</h2>
+    <ul class="dt-loss"><li>Това, което днес е истерия или мълчание, утре може да стане тревожност, която не го пуска.</li><li>Детето свиква да вярва, че с него „нещо не е наред“ — и носи този етикет с години.</li><li>Стената между вас става все по-висока, докато стане трудно да я събориш.</li></ul>
+    <p style="margin-top:24px;font-size:1.1rem;color:#fff">Но има и друг път — не над характера на детето, а над начина, по който го виждаш и подкрепяш.</p>
+  </div>
+</div>
+
+<div class="dt-sec">
+  <div class="dt-w dt-c">
+    <div class="dt-eye">Какво казва науката</div>
+    <h2>Не е магия. И не е твоя вина.</h2>
+    <div class="dt-sci">
+      <div class="dt-scc"><span class="dt-sct">Тялото помни</span><h3>Реакцията идва преди мисълта</h3><p>Болката живее не само в спомените, а в тялото. Затова детето избухва или се затваря, преди да може да обясни защо.</p></div>
+      <div class="dt-scc"><span class="dt-sct">Предава се</span><h3>Тревогата често е по-стара от детето</h3><p>Тревожността и болката могат да преминават през поколения. Затова не можеш да си виновна за нещо, което не е започнало с теб.</p></div>
+      <div class="dt-scc"><span class="dt-sct">Лекува се чрез теб</span><h3>Детето се успокоява заедно с теб</h3><p>Когато ти намериш своя покой, неговото малко сърце се успокоява с твоето. Ти не си вината — ти си спокойствието, което то търси.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="dt-sec dt-cream">
+  <div class="dt-w dt-c">
+    <div class="dt-eye">Реални отзиви</div>
+    <h2>Какво споделят хората</h2>
+    <div class="dt-rev">
+      <div class="dt-rci"><img src="https://content.app-sources.com/s/105502761907659961/uploads/Изображения/otzivNeliRazpopova-1894077.jpg" alt="Отзив"></div>
+      <div class="dt-rci"><img src="https://content.app-sources.com/s/105502761907659961/uploads/Изображения/otzivMarianaDimitrova-1894085.jpg" alt="Отзив"></div>
+      <div class="dt-rci"><img src="https://content.app-sources.com/s/105502761907659961/uploads/Изображения/otzivRaya-1894093.jpg" alt="Отзив"></div>
+    </div>
+  </div>
+</div>
+
+<div class="dt-sec">
+  <div class="dt-w"><div class="dt-guar"><div class="dt-seal">🛡️ 90-ДНЕВНА ГАРАНЦИЯ „ВИЖ ПРОМЯНАТА“</div><h2 style="margin-bottom:12px">Целият риск е мой</h2><p style="color:#6a6f7d;margin:0 0 10px">Прочети книгата. Приложи Система Огледало™ у дома. Ако в рамките на 90 дни не усетиш промяна — в начина, по който се чувствате с детето си, в спокойствието вкъщи, в това колко по-лесно се разбирате — пишеш ми и връщам парите за книгата. Без въпроси, без неудобство.</p><p style="font-size:.82rem;color:#9aa3b0;margin:0">* Гаранцията важи за книгата. Личната консултация, веднъж проведена, не подлежи на връщане на сумата.</p></div></div>
+</div>
+
+<div class="dt-sec dt-cream">
+  <div class="dt-w dt-c">
+    <div class="dt-eye">Често задавани въпроси</div>
+    <h2>Отговори преди да поръчаш</h2>
+    <div class="dt-faq">
+      <details><summary>За каква възраст е подходяща книгата?</summary><p>За майки на деца от 3 до 18 години. Примерите покриват целия диапазон — от малки деца с избухвания до затворени тийнейджъри.</p></details>
+      <details><summary>Детето ми трябва ли да чете книгата?</summary><p>Не. Книгата се чете и прилага от теб. Когато ти се промениш, детето започва да се променя заедно с теб.</p></details>
+      <details><summary>Как се плаща и кога?</summary><p>С наложен платеж — плащаш при доставка. Не е нужна карта и не плащаш нищо предварително.</p></details>
+      <details><summary>Трудна ли е за четене?</summary><p>Не. Написана е на разбираем, човешки език, с истории, в които ще се познаеш.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="dt-sec dt-fin">
+  <div class="dt-w" style="max-width:760px">
+    <div class="dt-eye" style="color:#d4795c">Тази вечер може да е различна</div>
+    <h2 style="color:#fff">Готова ли си най-после да чуеш какво ти казва детето?</h2>
+    <p style="font-size:1.1rem">Не е нужно да се бориш повече. Нужно е само да разбереш. Остават само <b style="color:#cf9b46"><span class="dt-stock">47</span> броя</b> на цена 17,90 € / 35,01 лв.</p>
+    <a class="dt-btn" href="https://deteto.convertbuilder.com/me/website/kniga-deteto/checkout/a" target="_top" style="margin-top:18px">Поръчай книгата за 17,90 € →</a>
+  </div>
+</div>
+
+<script>
+(function(){var K="dt_dl",D=24*36e5,n=Date.now(),d=parseInt(localStorage.getItem(K),10);if(!d||d<n){d=n+D;localStorage.setItem(K,d)}function p(x){return x<10?"0"+x:""+x}function S(c,v){var e=document.querySelectorAll("."+c);for(var i=0;i<e.length;i++)e[i].textContent=v}function t(){var f=d-Date.now();if(f<0)f=0;S("dt-h",p(Math.floor(f/36e5)));S("dt-m",p(Math.floor(f%36e5/6e4)));S("dt-s",p(Math.floor(f%6e4/1e3)))}t();setInterval(t,1e3);
+var SK="dt_st_v1",ST=47,FL=9,RS=12*36e5,da;try{da=JSON.parse(localStorage.getItem(SK))}catch(e){da=null}if(!da||typeof da.n!="number"||!da.b||(n-da.b)>RS){da={n:ST,t:n,b:n}}else{var dr=Math.floor((n-da.t)/(36e5/10));if(dr>0){da.n=Math.max(FL,da.n-dr);da.t=n}}localStorage.setItem(SK,JSON.stringify(da));function R(){S("dt-stock",da.n)}R();function tk(){setTimeout(function(){if(da.n>FL){da.n--;da.t=Date.now();localStorage.setItem(SK,JSON.stringify(da));R()}tk()},(30+Math.random()*50)*1e3)}setTimeout(function(){if(da.n>FL){da.n--;localStorage.setItem(SK,JSON.stringify(da));R()}tk()},12e3)})();
+</script>
+</body></html>
